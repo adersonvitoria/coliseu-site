@@ -562,15 +562,20 @@ function jewelArt(kind){
 }
 function qrSVG(seed){
   let s = seed; const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+  const N = 21, M = 6, T = N * M;
+  const ehFinder = (x, y) => (x < 8 && y < 8) || (x > 12 && y < 8) || (x < 8 && y > 12);
   let cells = '';
-  for (let y = 0; y < 21; y++) for (let x = 0; x < 21; x++){
-    const finder = (x < 8 && y < 8) || (x > 12 && y < 8) || (x < 8 && y > 12);
-    if (!finder && rnd() > .52) cells += `<rect x="${x*6}" y="${y*6}" width="6" height="6"/>`;
+  for (let y = 0; y < N; y++) for (let x = 0; x < N; x++){
+    if (ehFinder(x, y)) continue;
+    const timing = (x === 6 || y === 6);
+    const on = timing ? (x + y) % 2 === 0 : rnd() > .5;
+    if (on) cells += `<rect x="${x*M}" y="${y*M}" width="${M}" height="${M}"/>`;
   }
-  const f = (px,py) => `<rect x="${px*6}" y="${py*6}" width="42" height="42" fill="#111"/>
-    <rect x="${px*6+6}" y="${py*6+6}" width="30" height="30" fill="#fff"/>
-    <rect x="${px*6+12}" y="${py*6+12}" width="18" height="18" fill="#111"/>`;
-  return `<svg viewBox="0 0 126 126" xmlns="http://www.w3.org/2000/svg"><rect width="126" height="126" fill="#fff"/><g fill="#111">${cells}${f(0,0)}${f(14,0)}${f(0,14)}</g></svg>`;
+  const f = (px, py) => `<rect x="${px*M}" y="${py*M}" width="${7*M}" height="${7*M}" fill="#111"/>` +
+    `<rect x="${(px+1)*M}" y="${(py+1)*M}" width="${5*M}" height="${5*M}" fill="#fff"/>` +
+    `<rect x="${(px+2)*M}" y="${(py+2)*M}" width="${3*M}" height="${3*M}" fill="#111"/>`;
+  return `<svg viewBox="0 0 ${T} ${T}" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">` +
+    `<rect width="${T}" height="${T}" fill="#fff"/><g fill="#111">${cells}${f(0,0)}${f(14,0)}${f(0,14)}</g></svg>`;
 }
 
 /* ================= PLUMBING DO CHAT ================= */
@@ -798,10 +803,11 @@ function fluxoPagamento(t){
     chat.pgto = 'PIX à vista';
     return { msgs: [
       `Fechado! 💚 No <b>PIX à vista</b> você ainda garante <b>prioridade de separação</b> da peça. Aqui está o QR Code:`,
-      `<div class="pay-card"><b>PIX · Coliseu Joalheria</b><br><span style="font-size:12px;color:#8696a0">${p.nome}</span>
+      `<div class="pay-card"><b>PIX · Coliseu Joalheria</b><span class="pay-sub">${p.nome}</span>
        <div class="qr">${qrSVG(p.preco + p.id)}</div>
-       <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:#0f7a5c">${fmtBRL2(p.preco)}</div>
-       <div class="px">00020126580014BR.GOV.BCB.PIX0136coliseu-${p.id}-concierge52040000530398654${String(p.preco)}5802BR5917COLISEU JOALHERIA6012PORTO ALEGRE</div></div>`,
+       <div class="pay-val">${fmtBRL2(p.preco)}</div>
+       <div class="pix-copia"><input class="px-inp" readonly value="${pixCodigo(p.preco, p.id)}"><button class="btn-copiar" type="button">Copiar código</button></div>
+       <span class="pay-obs">PIX copia e cola · pagamento instantâneo</span></div>`,
       'Assim que o pagamento cair eu já te confirmo por aqui ⚡'
     ], chips: ['Já paguei ✅','Prefiro link 12x','Falar com consultora'] , fase:'pix_pendente' };
   }
@@ -810,17 +816,19 @@ function fluxoPagamento(t){
     const sv = Math.round(p.preco * 0.2);
     return { msgs: [
       `Ótima escolha! Com um <b>sinal de 20% (${fmtBRL(sv)})</b> a peça fica <b>garantida no seu nome</b> e você finaliza na loja com calma 😊`,
-      `<div class="pay-card"><b>PIX · Sinal de reserva</b><br><span style="font-size:12px;color:#8696a0">${p.nome}</span>
+      `<div class="pay-card"><b>PIX · Sinal de reserva</b><span class="pay-sub">${p.nome}</span>
        <div class="qr">${qrSVG(sv + 7)}</div>
-       <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:#0f7a5c">${fmtBRL2(sv)}</div></div>`
+       <div class="pay-val">${fmtBRL2(sv)}</div>
+       <div class="pix-copia"><input class="px-inp" readonly value="${pixCodigo(sv, p.id)}"><button class="btn-copiar" type="button">Copiar código</button></div>
+       <span class="pay-obs">Sinal de 20% · saldo na retirada</span></div>`
     ], chips: ['Já paguei ✅','Mudei de ideia'], fase:'pix_pendente' };
   }
   if (/12x|link|cartao|credito|parcel/.test(t)){
     chat.pgto = 'Link 12x sem juros';
     return { msgs: [
       `Perfeito! 💳 Em <b>12x de ${fmtBRL2(Math.round(p.preco/12*100)/100)} sem juros</b>. Gerei seu link de pagamento seguro:`,
-      `<div class="link-card"><b>🔒 Pagamento seguro · Coliseu</b><br><span style="font-size:12px;color:#54656f">${p.nome} — ${fmtBRL2(p.preco)} em até 12x</span>
-       <span class="lk">pay.coliseu.com.br/c/${(p.id*7333).toString(36)}9x</span></div>`,
+      `<div class="link-card"><b>🔒 Pagamento seguro · Coliseu</b><span class="pay-sub">${p.nome} — ${fmtBRL2(p.preco)} em até 12x</span>
+       <div class="pix-copia"><input class="px-inp" readonly value="https://pay.coliseu.com.br/c/${(p.id*7333).toString(36)}9x"><button class="btn-copiar" type="button">Copiar link</button></div></div>`,
       'O link expira em 24h. Assim que aprovar, te confirmo aqui na hora ⚡'
     ], chips: ['Paguei no link ✅','Prefiro PIX à vista','Falar com consultora'], fase:'pix_pendente' };
   }
@@ -1206,6 +1214,27 @@ async function sendUser(text){
 $('#btnSend').addEventListener('click', () => sendUser(chatInput.value));
 chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendUser(chatInput.value); });
 $('#btnReset').addEventListener('click', resetChat);
+/* código PIX copia-e-cola + botão copiar */
+function pixCodigo(valor, id){
+  const v = Number(valor).toFixed(2);
+  return '00020126580014BR.GOV.BCB.PIX0136coliseu-' + id + '-demo52040000530398654' +
+    String(v).length + v + '5802BR5917COLISEU JOALHERIA6012PORTO ALEGRE6304DEMO';
+}
+chatBox.addEventListener('click', e => {
+  const b = e.target.closest('.btn-copiar'); if (!b) return;
+  const inp = b.parentElement.querySelector('.px-inp'); if (!inp) return;
+  if (!b.dataset.rotulo) b.dataset.rotulo = b.textContent;
+  inp.focus(); inp.select(); inp.setSelectionRange(0, 99999);
+  const feito = () => {
+    b.textContent = 'Copiado ✓'; b.classList.add('ok');
+    setTimeout(() => { b.textContent = b.dataset.rotulo; b.classList.remove('ok'); }, 2400);
+  };
+  const fallback = () => { try { document.execCommand('copy'); } catch (err) {} feito(); };
+  if (navigator.clipboard && navigator.clipboard.writeText)
+    navigator.clipboard.writeText(inp.value).then(feito).catch(fallback);
+  else fallback();
+});
+
 $('#suggRow').innerHTML = TIPS.map(s => `<button type="button">${s}</button>`).join('');
 $$('#suggRow button').forEach(b => b.addEventListener('click', () => sendUser(b.textContent)));
 
