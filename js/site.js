@@ -186,6 +186,16 @@ document.getElementById('formNews').addEventListener('submit', async ev => {
   sendUser('Quero me cadastrar para receber as novidades');
 });
 
+/* ---------- menu mobile ---------- */
+const btnHamb = document.getElementById('btnHamb');
+const mMenu = document.getElementById('mMenu');
+function fechaMenu(){ btnHamb.classList.remove('on'); mMenu.classList.remove('on'); }
+btnHamb.addEventListener('click', () => {
+  btnHamb.classList.toggle('on');
+  mMenu.classList.toggle('on');
+});
+mMenu.querySelectorAll('a, button').forEach(el => el.addEventListener('click', fechaMenu));
+
 /* ---------- boot ---------- */
 renderCarrosseis();
 renderRelCats();
@@ -193,3 +203,6 @@ renderPrataCats();
 renderEyewear();
 renderLojas();
 ligaDataZap();
+
+/* ?zap=1 abre o atendimento direto (bom para links de demo) */
+if (new URLSearchParams(location.search).get('zap')) abrirZap();

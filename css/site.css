@@ -45,6 +45,28 @@ a{color:inherit}
 .ico:hover{background:#f2f2f2}
 .ico svg{width:21px;height:21px}
 
+.hamb{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:9px}
+.hamb span{display:block;height:1.8px;background:#222;border-radius:2px;transition:all .25s}
+.hamb.on span:nth-child(1){transform:translateY(6.8px) rotate(45deg)}
+.hamb.on span:nth-child(2){opacity:0}
+.hamb.on span:nth-child(3){transform:translateY(-6.8px) rotate(-45deg)}
+.mmenu{
+  position:fixed;left:0;right:0;top:0;z-index:190;background:#fff;
+  padding:84px 26px 22px;box-shadow:0 30px 60px -30px rgba(0,0,0,.25);
+  transform:translateY(-12px);opacity:0;pointer-events:none;transition:all .28s ease;
+}
+.mmenu.on{transform:none;opacity:1;pointer-events:auto}
+.mmenu a{
+  display:block;padding:13px 2px;text-decoration:none;color:#222;
+  font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  border-bottom:1px solid #f1ece1;
+}
+.mmenu a.sale{color:#b3925a}
+.mmenu .mm-zap{
+  margin-top:16px;width:100%;background:linear-gradient(110deg,#c9ac7c,#a98850 60%,#8a6d3c);
+  color:#fff;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:14px;
+}
+
 /* ===== hero ===== */
 .hero{position:relative;overflow:hidden;background:#0c0a08}
 .hero .slide{display:none}
@@ -125,8 +147,8 @@ a{color:inherit}
   border:1px solid #111;background:#111;color:#fff;font-size:10.5px;font-weight:600;
   letter-spacing:.14em;text-transform:uppercase;padding:10px 8px;transition:all .2s;
 }
-.prod .zbt svg{width:14px;height:14px;color:#25D366}
-.prod:hover .zbt{background:#25D366;border-color:#25D366}
+.prod .zbt svg{width:14px;height:14px;color:#c9ac7c}
+.prod:hover .zbt{background:#8a6d3c;border-color:#8a6d3c}
 .prod:hover .zbt svg{color:#fff}
 .c-seta{
   position:absolute;top:33%;z-index:5;width:36px;height:36px;border-radius:50%;
@@ -145,7 +167,7 @@ a{color:inherit}
   background:#111;color:#fff;border:1px solid #fff3;font-size:11.5px;font-weight:600;
   letter-spacing:.18em;text-transform:uppercase;padding:13px 22px;align-self:flex-start;transition:all .2s;
 }
-.btn-preto:hover{background:#25D366;border-color:#25D366}
+.btn-preto:hover{background:#8a6d3c;border-color:#8a6d3c}
 .eb-dir{background:#fff;display:grid;grid-template-columns:1fr 1fr;align-items:center}
 .eb-item{display:flex;flex-direction:column;align-items:center;gap:6px;padding:32px 22px}
 .eb-item + .eb-item{border-left:1px solid #efefef}
@@ -221,20 +243,21 @@ footer a:hover{color:#111}
 /* ===== WhatsApp FAB + janela ===== */
 .zap-fab{
   position:fixed;right:26px;bottom:26px;z-index:900;
-  width:62px;height:62px;border-radius:50%;background:#25D366;
+  width:62px;height:62px;border-radius:50%;
+  background:linear-gradient(135deg,#c9ac7c,#a98850 55%,#8a6d3c);
   display:flex;align-items:center;justify-content:center;
-  box-shadow:0 16px 34px -10px rgba(37,211,102,.55);
+  box-shadow:0 16px 34px -10px rgba(138,109,60,.6), inset 0 1px 0 rgba(255,255,255,.35);
   transition:transform .2s;
 }
 .zap-fab:hover{transform:scale(1.06)}
 .zap-fab::before{
-  content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(37,211,102,.45);
+  content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(179,146,90,.55);
   animation:pulso 2s infinite;
 }
 @keyframes pulso{0%{transform:scale(.9);opacity:.9}70%{transform:scale(1.25);opacity:0}100%{opacity:0}}
 .zap-fab svg{width:34px;height:34px}
 .zap-badge{
-  position:absolute;top:-2px;right:-2px;background:#e53935;color:#fff;font-size:11px;font-weight:700;
+  position:absolute;top:-2px;right:-2px;background:#111;color:#fff;font-size:11px;font-weight:700;
   width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;
   font-family:'Jost',sans-serif;
 }
@@ -263,22 +286,55 @@ footer a:hover{color:#111}
 /* ===== responsivo ===== */
 @media (max-width:1180px){
   .topo nav{display:none}
+  .hamb{display:flex}
   .cards6{grid-template-columns:repeat(3,1fr)}
+  .busca{min-width:170px}
 }
 @media (max-width:820px){
-  .topbar{grid-template-columns:1fr;justify-items:center;gap:4px}
+  .topbar{grid-template-columns:1fr;justify-items:center;gap:4px;padding:8px 14px}
   .tb-l,.tb-r{display:none}
-  .cards6{grid-template-columns:repeat(2,1fr)}
+  .topo{flex-wrap:wrap;gap:12px;padding:10px 16px}
+  .topo .logo{margin-right:auto}
+  .topo .logo img{height:36px}
+  .busca{order:5;flex-basis:100%;min-width:0}
+  .sec{padding:48px 0 10px}
+  .stitle{margin-bottom:24px;padding:0 18px}
+  .stitle h2{font-size:22px}
+  .cards6{grid-template-columns:repeat(2,1fr);gap:12px}
   .cards3{grid-template-columns:1fr}
-  .eyeband{grid-template-columns:1fr}
+  .euquero{padding:52px 0 10px}
+  .hero .slide img{max-height:58vh}
+  .h-cta{right:0;left:0;text-align:center;bottom:30px}
+  .h-seta{width:36px;height:36px}
+  .h-seta.e{left:10px}.h-seta.d{right:10px}
+  .carr{gap:12px;padding-bottom:20px}
+  .prod{flex:0 0 74%;min-width:0}
+  .c-seta.e{left:6px}.c-seta.d{right:6px}
+  .eyeband{grid-template-columns:1fr;margin-top:52px;min-height:0}
+  .eb-esq{padding:34px 26px;gap:16px}
+  .eb-esq h2{font-size:30px}
   .eb-dir{grid-template-columns:1fr}
-  .iconicas{grid-template-columns:1fr}
-  .nw-grid{grid-template-columns:1fr}
-  .depos{grid-template-columns:1fr}
-  .prod{flex:0 0 72%}
-  .busca{min-width:0;flex:1}
+  .eb-item + .eb-item{border-left:none;border-top:1px solid #efefef}
+  .eb-item img{height:120px}
+  .formemark{font-size:24px;padding-top:52px}
+  .iconicas{grid-template-columns:1fr;gap:14px}
+  .btn-colecao{right:12px;bottom:12px;font-size:9.5px;padding:8px 12px}
+  .news{padding:56px 20px 8px}
+  .news h3{font-size:18px}
+  .nw-grid{grid-template-columns:1fr;gap:18px}
+  .difs{padding:44px 20px 12px;gap:18px}
+  .depos{grid-template-columns:1fr;gap:12px}
+  .f-grid{grid-template-columns:1fr;gap:26px;padding:36px 20px 24px}
+  footer{margin-top:56px}
 }
 @media (max-width:520px){
-  .zap-pop{right:8px;bottom:96px;width:calc(100vw - 16px)}
-  .zap-pop .screen{height:min(70vh,560px)}
+  .cards6{grid-template-columns:repeat(2,1fr)}
+  .cardq img{padding:8px}
+  .prod .nm{min-height:0}
+  .zap-fab{right:14px;bottom:14px;width:56px;height:56px}
+  .zap-fab svg{width:30px;height:30px}
+  .zap-pop{right:8px;left:8px;bottom:82px;width:auto;max-width:none}
+  .zap-pop .screen{height:min(74vh,590px)}
+  .euquero span{font-size:18px;padding:14px 20px}
+  .depo{padding:18px}
 }
