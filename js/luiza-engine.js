@@ -1,5 +1,5 @@
 /* =====================================================================
-   Luiza — engine de atendimento (extraída do demo joalheria-bots)
+   Luiza · engine de atendimento (extraída do demo joalheria-bots)
    Catálogo, filiais, preços e fotos: dados públicos do site coliseu.com.br
    ===================================================================== */
 function pushVenda(){}
@@ -21,45 +21,45 @@ const USERS = [
 
 /* ---------- 14 lojas reais da rede (site: coliseu.com.br/onde-encontrar) ---------- */
 const FILIAIS = [
-  { id:'iguatemi',    nome:'Coliseu Iguatemi',           shopping:'Iguatemi Porto Alegre',      end:'Av. João Wallig, 1800 — Passo D\'Areia', cidade:'Porto Alegre', uf:'RS', fone:'(51) 99971-9894', consultora:'Camila F.',  leads:152, vendas:29, receita:84200,  zonas:['iguatemi','passo d areia','zona norte'] },
+  { id:'iguatemi',    nome:'Coliseu Iguatemi',           shopping:'Iguatemi Porto Alegre',      end:'Av. João Wallig, 1800 - Passo D\'Areia', cidade:'Porto Alegre', uf:'RS', fone:'(51) 99971-9894', consultora:'Camila F.',  leads:152, vendas:29, receita:84200,  zonas:['iguatemi','passo d areia','zona norte'] },
   { id:'praiadebelas',nome:'Coliseu Praia de Belas',     shopping:'Praia de Belas Shopping',    end:'Av. Praia de Belas, 1181', cidade:'Porto Alegre', uf:'RS', fone:'(51) 98408-8226', consultora:'Renata S.',  leads:138, vendas:25, receita:71900,  zonas:['praia de belas','centro sul','menino deus'] },
-  { id:'barrasul',    nome:'Coliseu Barra Sul',          shopping:'BarraShoppingSul',           end:'Av. Diário de Notícias, 300 — Cristal', cidade:'Porto Alegre', uf:'RS', fone:'(51) 99740-5082', consultora:'Vanessa R.', leads:121, vendas:21, receita:58300,  zonas:['barra','cristal','zona sul','ipanema','tristeza'] },
-  { id:'moinhos',     nome:'Coliseu Moinhos',            shopping:'Moinhos Shopping',           end:'R. Olavo Barreto Viana, 36 — Moinhos de Vento', cidade:'Porto Alegre', uf:'RS', fone:'(51) 99600-1395', consultora:'Luiza T.',   leads:104, vendas:19, receita:55100,  zonas:['moinhos','independencia','auxiliadora'] },
-  { id:'ipiranga',    nome:'Coliseu Bourbon Ipiranga',   shopping:'Bourbon Shopping Ipiranga',  end:'Av. Ipiranga, 5200 — Jardim Botânico', cidade:'Porto Alegre', uf:'RS', fone:'(51) 98408-8229', consultora:'Débora K.',  leads:98,  vendas:17, receita:48600,  zonas:['ipiranga','jardim botanico','partenon'] },
-  { id:'country',     nome:'Coliseu Bourbon Country',    shopping:'Bourbon Country',            end:'Av. Túlio de Rose, 80 — Passo D\'Areia', cidade:'Porto Alegre', uf:'RS', fone:'(51) 98407-9861', consultora:'Marina C.',  leads:92,  vendas:15, receita:43900,  zonas:['country','tulio'] },
-  { id:'wallig',      nome:'Coliseu Bourbon Wallig',     shopping:'Bourbon Shopping Wallig',    end:'Av. Assis Brasil, 2611 — Cristo Redentor', cidade:'Porto Alegre', uf:'RS', fone:'(51) 99615-6978', consultora:'Patrícia G.',leads:88,  vendas:14, receita:39400,  zonas:['wallig','assis brasil','cristo redentor'] },
-  { id:'parkcanoas',  nome:'Coliseu Park Canoas',        shopping:'ParkShopping Canoas',        end:'Av. Farroupilha, 4545 — Canoas', cidade:'Canoas', uf:'RS', fone:'(51) 98408-8227', consultora:'Fernanda L.',leads:84,  vendas:13, receita:36800,  zonas:['canoas','park canoas'] },
-  { id:'andradas',    nome:'Coliseu Andradas',           shopping:'Loja histórica — desde 1968',end:'R. dos Andradas, 1593 — Centro Histórico', cidade:'Porto Alegre', uf:'RS', fone:'(51) 99747-7162', consultora:'Paulo M.',   leads:79,  vendas:12, receita:33500,  zonas:['andradas','centro historico','rua da praia'] },
-  { id:'villagio',    nome:'Coliseu Villagio',           shopping:'Shopping Villagio Caxias',   end:'Rod. RSC 453, 2780 — Caxias do Sul', cidade:'Caxias do Sul', uf:'RS', fone:'(54) 99601-5860', consultora:'Bruna P.',   leads:74,  vendas:11, receita:30200,  zonas:['caxias','villagio','serra'] },
-  { id:'bourbonnh',   nome:'Coliseu Bourbon NH',         shopping:'Bourbon Novo Hamburgo',      end:'Av. Nações Unidas, 2001 — Novo Hamburgo', cidade:'Novo Hamburgo', uf:'RS', fone:'(51) 99674-1304', consultora:'Aline W.',   leads:68,  vendas:10, receita:27700,  zonas:['novo hamburgo','vale dos sinos','sao leopoldo','nh'] },
-  { id:'camboriu',    nome:'Coliseu Balneário Camboriú', shopping:'Balneário Camboriú',         end:'Av. Santa Catarina, 01 — Estados', cidade:'Balneário Camboriú', uf:'SC', fone:'(48) 99111-1713', consultora:'Carol D.',   leads:62,  vendas:10, receita:29400,  zonas:['camboriu','balneario','bc'] },
-  { id:'joinville',   nome:'Coliseu Joinville',          shopping:'Joinville',                  end:'Av. Rolf Wiest, 333 — Bom Retiro', cidade:'Joinville', uf:'SC', fone:'(47) 99160-7392', consultora:'Tatiane H.', leads:56,  vendas:9,  receita:26100,  zonas:['joinville'] },
-  { id:'passofundo',  nome:'Coliseu Passo Fundo',        shopping:'Passo Fundo',                end:'Av. Presidente Vargas, 1610 — Vila Rodrigues', cidade:'Passo Fundo', uf:'RS', fone:'(54) 99699-1667', consultora:'Jéssica M.', leads:51,  vendas:9,  receita:27300,  zonas:['passo fundo','planalto'] }
+  { id:'barrasul',    nome:'Coliseu Barra Sul',          shopping:'BarraShoppingSul',           end:'Av. Diário de Notícias, 300 - Cristal', cidade:'Porto Alegre', uf:'RS', fone:'(51) 99740-5082', consultora:'Vanessa R.', leads:121, vendas:21, receita:58300,  zonas:['barra','cristal','zona sul','ipanema','tristeza'] },
+  { id:'moinhos',     nome:'Coliseu Moinhos',            shopping:'Moinhos Shopping',           end:'R. Olavo Barreto Viana, 36 - Moinhos de Vento', cidade:'Porto Alegre', uf:'RS', fone:'(51) 99600-1395', consultora:'Luiza T.',   leads:104, vendas:19, receita:55100,  zonas:['moinhos','independencia','auxiliadora'] },
+  { id:'ipiranga',    nome:'Coliseu Bourbon Ipiranga',   shopping:'Bourbon Shopping Ipiranga',  end:'Av. Ipiranga, 5200 - Jardim Botânico', cidade:'Porto Alegre', uf:'RS', fone:'(51) 98408-8229', consultora:'Débora K.',  leads:98,  vendas:17, receita:48600,  zonas:['ipiranga','jardim botanico','partenon'] },
+  { id:'country',     nome:'Coliseu Bourbon Country',    shopping:'Bourbon Country',            end:'Av. Túlio de Rose, 80 - Passo D\'Areia', cidade:'Porto Alegre', uf:'RS', fone:'(51) 98407-9861', consultora:'Marina C.',  leads:92,  vendas:15, receita:43900,  zonas:['country','tulio'] },
+  { id:'wallig',      nome:'Coliseu Bourbon Wallig',     shopping:'Bourbon Shopping Wallig',    end:'Av. Assis Brasil, 2611 - Cristo Redentor', cidade:'Porto Alegre', uf:'RS', fone:'(51) 99615-6978', consultora:'Patrícia G.',leads:88,  vendas:14, receita:39400,  zonas:['wallig','assis brasil','cristo redentor'] },
+  { id:'parkcanoas',  nome:'Coliseu Park Canoas',        shopping:'ParkShopping Canoas',        end:'Av. Farroupilha, 4545 - Canoas', cidade:'Canoas', uf:'RS', fone:'(51) 98408-8227', consultora:'Fernanda L.',leads:84,  vendas:13, receita:36800,  zonas:['canoas','park canoas'] },
+  { id:'andradas',    nome:'Coliseu Andradas',           shopping:'Loja histórica, desde 1968',end:'R. dos Andradas, 1593 - Centro Histórico', cidade:'Porto Alegre', uf:'RS', fone:'(51) 99747-7162', consultora:'Paulo M.',   leads:79,  vendas:12, receita:33500,  zonas:['andradas','centro historico','rua da praia'] },
+  { id:'villagio',    nome:'Coliseu Villagio',           shopping:'Shopping Villagio Caxias',   end:'Rod. RSC 453, 2780 - Caxias do Sul', cidade:'Caxias do Sul', uf:'RS', fone:'(54) 99601-5860', consultora:'Bruna P.',   leads:74,  vendas:11, receita:30200,  zonas:['caxias','villagio','serra'] },
+  { id:'bourbonnh',   nome:'Coliseu Bourbon NH',         shopping:'Bourbon Novo Hamburgo',      end:'Av. Nações Unidas, 2001 - Novo Hamburgo', cidade:'Novo Hamburgo', uf:'RS', fone:'(51) 99674-1304', consultora:'Aline W.',   leads:68,  vendas:10, receita:27700,  zonas:['novo hamburgo','vale dos sinos','sao leopoldo','nh'] },
+  { id:'camboriu',    nome:'Coliseu Balneário Camboriú', shopping:'Balneário Camboriú',         end:'Av. Santa Catarina, 01 - Estados', cidade:'Balneário Camboriú', uf:'SC', fone:'(48) 99111-1713', consultora:'Carol D.',   leads:62,  vendas:10, receita:29400,  zonas:['camboriu','balneario','bc'] },
+  { id:'joinville',   nome:'Coliseu Joinville',          shopping:'Joinville',                  end:'Av. Rolf Wiest, 333 - Bom Retiro', cidade:'Joinville', uf:'SC', fone:'(47) 99160-7392', consultora:'Tatiane H.', leads:56,  vendas:9,  receita:26100,  zonas:['joinville'] },
+  { id:'passofundo',  nome:'Coliseu Passo Fundo',        shopping:'Passo Fundo',                end:'Av. Presidente Vargas, 1610 - Vila Rodrigues', cidade:'Passo Fundo', uf:'RS', fone:'(54) 99699-1667', consultora:'Jéssica M.', leads:51,  vendas:9,  receita:27300,  zonas:['passo fundo','planalto'] }
 ];
 const filialById = id => FILIAIS.find(f => f.id === id);
 
 /* ---------- Catálogo (peças e preços reais do e-commerce) ---------- */
 const PRODUTOS = [
-  { id:1,  cat:'joia',    art:'anel',     quem:'ela', img:'pecas/p1.webp',  nome:'Anel Way ouro 18k',            desc:'Três linhas delicadas com 15 pts de Diamantes — Coleção Way', preco:5990, hero:true },
+  { id:1,  cat:'joia',    art:'anel',     quem:'ela', img:'pecas/p1.webp',  nome:'Anel Way ouro 18k',            desc:'Três linhas delicadas com 15 pts de Diamantes · Coleção Way', preco:5990, hero:true },
   { id:2,  cat:'joia',    art:'colar',    quem:'ela', img:'pecas/p2.webp',  nome:'Gargantilha Way ouro 18k',     desc:'Linhas delicadas com 8 pts de Diamantes', preco:6290 },
   { id:3,  cat:'joia',    art:'brinco',   quem:'ela', img:'pecas/p3.webp',  nome:'Brinco Way Ear Cuff ouro 18k', desc:'Duas linhas com Diamantes e gota de Esmeralda', preco:9900 },
-  { id:4,  cat:'joia',    art:'anel',     quem:'ela', img:'pecas/p4.webp',  nome:'Anel Way aro delicado',        desc:'Ouro 18k com 9 pts de Diamantes — entrada da coleção', preco:3390 },
+  { id:4,  cat:'joia',    art:'anel',     quem:'ela', img:'pecas/p4.webp',  nome:'Anel Way aro delicado',        desc:'Ouro 18k com 9 pts de Diamantes · entrada da coleção', preco:3390 },
   { id:5,  cat:'joia',    art:'colar',    quem:'ela', img:'pecas/p5.webp',  nome:'Gargantilha Way ouro branco',  desc:'Duas linhas de Diamantes com gota de Safira Azul', preco:8990 },
-  { id:6,  cat:'prata',   art:'colar',    quem:'ela', img:'pecas/p6.webp',  nome:'Gargantilha Bubble prata 925', desc:'Módulos circulares com bolhas de Zircônias — For Me by Coliseu', preco:1190 },
+  { id:6,  cat:'prata',   art:'colar',    quem:'ela', img:'pecas/p6.webp',  nome:'Gargantilha Bubble prata 925', desc:'Módulos circulares com bolhas de Zircônias · For Me by Coliseu', preco:1190 },
   { id:7,  cat:'prata',   art:'anel',     quem:'ela', img:'pecas/p7.webp',  nome:'Anel Bubble prata dourada',    desc:'Prata 925 com banho dourado e Zircônias brancas', preco:990 },
   { id:8,  cat:'prata',   art:'brinco',   quem:'ela', img:'pecas/p8.webp',  nome:'Brinco Bubble Ear Cuff',       desc:'Prata 925 banho dourado, bolhas de Zircônias', preco:790 },
   { id:9,  cat:'prata',   art:'pingente', quem:'ela', img:'pecas/p9.webp',  nome:'Gargantilha Bubble gravatinha',desc:'Prata 925 banho dourado, módulos pendentes de Zircônias', preco:990 },
   { id:10, cat:'prata',   art:'pulseira', quem:'ela', img:'pecas/p10.webp', nome:'Pulseira Bubble de elos',      desc:'Prata 925 dourada, módulos com Zircônias', preco:990 },
-  { id:11, cat:'relogio', art:'relogio',  quem:'ele', img:'pecas/p11.webp', nome:'Orient Bambino Automatic',     desc:'Automático, mostrador verde — clássico elegante', preco:2799 },
-  { id:12, cat:'relogio', art:'relogio',  quem:'ele', img:'pecas/p12.webp', nome:'Orient Sun & Moon Automatic',  desc:'Mostrador marfim com fases sol/lua — dress watch', preco:4599 },
-  { id:13, cat:'relogio', art:'relogio',  quem:'ele', img:'pecas/p13.webp', nome:'Seiko Prospex Shogu-Rai',      desc:'Edição limitada 145 anos — colecionável', preco:5499, hero:true },
+  { id:11, cat:'relogio', art:'relogio',  quem:'ele', img:'pecas/p11.webp', nome:'Orient Bambino Automatic',     desc:'Automático, mostrador verde · clássico elegante', preco:2799 },
+  { id:12, cat:'relogio', art:'relogio',  quem:'ele', img:'pecas/p12.webp', nome:'Orient Sun & Moon Automatic',  desc:'Mostrador marfim com fases sol/lua · dress watch', preco:4599 },
+  { id:13, cat:'relogio', art:'relogio',  quem:'ele', img:'pecas/p13.webp', nome:'Seiko Prospex Shogu-Rai',      desc:'Edição limitada 145 anos · colecionável', preco:5499, hero:true },
   { id:14, cat:'relogio', art:'relogio',  quem:'ele', img:'pecas/p14.webp', nome:'Bulova Snorkel Ed. Brasil',    desc:'Edição limitada Brasil, mergulho, verde', preco:3490 },
-  { id:20, cat:'relogio', art:'relogio',  quem:'ela', img:'pecas/p20.webp', nome:'Orient Bambino Automatic Azul',desc:'Automático, mostrador azul — elegante no pulso feminino', preco:2599 },
-  { id:15, cat:'oculos',  art:'oculos',   quem:'ela', img:'pecas/p15.webp', nome:'Óculos de grau Miu Miu',       desc:'Acetato marrom mesclado polido — 0MU 03ZV', preco:2980 },
-  { id:16, cat:'oculos',  art:'oculos',   quem:'ele', img:'pecas/p16.webp', nome:'Óculos de grau Persol',        desc:'Acetato bordô — 0PO3343V, ícone italiano', preco:1990 },
-  { id:17, cat:'oculos',  art:'oculos',   quem:'ele', img:'pecas/p17.webp', nome:'Óculos Salvatore Ferragamo',   desc:'Acetato preto mesclado — SF3011', preco:2770 },
-  { id:18, cat:'alianca', art:'alianca',  quem:'casal', img:'pecas/p18.webp', nome:'Alianças Sable ouro 18k',      desc:'Par anatômico frisado — Coleção Sable, gravação gratuita', preco:4990, aPartir:true },
-  { id:19, cat:'alianca', art:'alianca',  quem:'casal', img:'pecas/p19.webp', nome:'Alianças Amore c/ Diamantes',  desc:'Par côncavo anatômico ouro 18k com Diamantes — Coleção Amore', preco:7490, aPartir:true },
+  { id:20, cat:'relogio', art:'relogio',  quem:'ela', img:'pecas/p20.webp', nome:'Orient Bambino Automatic Azul',desc:'Automático, mostrador azul · elegante no pulso feminino', preco:2599 },
+  { id:15, cat:'oculos',  art:'oculos',   quem:'ela', img:'pecas/p15.webp', nome:'Óculos de grau Miu Miu',       desc:'Acetato marrom mesclado polido · 0MU 03ZV', preco:2980 },
+  { id:16, cat:'oculos',  art:'oculos',   quem:'ele', img:'pecas/p16.webp', nome:'Óculos de grau Persol',        desc:'Acetato bordô · 0PO3343V, ícone italiano', preco:1990 },
+  { id:17, cat:'oculos',  art:'oculos',   quem:'ele', img:'pecas/p17.webp', nome:'Óculos Salvatore Ferragamo',   desc:'Acetato preto mesclado · SF3011', preco:2770 },
+  { id:18, cat:'alianca', art:'alianca',  quem:'casal', img:'pecas/p18.webp', nome:'Alianças Sable ouro 18k',      desc:'Par anatômico frisado · Coleção Sable, gravação gratuita', preco:4990, aPartir:true },
+  { id:19, cat:'alianca', art:'alianca',  quem:'casal', img:'pecas/p19.webp', nome:'Alianças Amore c/ Diamantes',  desc:'Par côncavo anatômico ouro 18k com Diamantes · Coleção Amore', preco:7490, aPartir:true },
 
 /* ---- catálogo completo importado do site (jul/2026) ---- */
   { id:21, cat:"joia", art:"anel", quem:"ela", img:"pecas/c2141178.webp", nome:"Anel Colosseo de Tanzanita oval em ouro branco 18k…", desc:"Ouro branco 18k · Diamantes · Tanzanita", preco:24900 },
@@ -633,10 +633,10 @@ function prodCardHTML(p, n){
 }
 function lojaCardHTML(f){
   return `<div class="loja-card"><b>📍 ${f.nome}</b>
-    <span class="lc-l">${f.shopping} — ${f.cidade}/${f.uf}</span>
+    <span class="lc-l">${f.shopping} · ${f.cidade}/${f.uf}</span>
     <span class="lc-l">${f.end}</span>
     <span class="lc-l">📱 ${f.fone} · 👩‍💼 Consultora: <b>${f.consultora}</b></span>
-    <span class="lc-l">🕐 Seg–Sáb 10h–22h · Dom 14h–20h (horário do shopping)</span></div>`;
+    <span class="lc-l">🕐 Seg a Sáb das 10h às 22h · Dom das 14h às 20h (horário do shopping)</span></div>`;
 }
 
 function resetChat(){
@@ -646,8 +646,8 @@ function resetChat(){
   chatBox.innerHTML = '';
   addDay('Hoje');
   botSay([
-    'Oi, tudo bem? 😊 Eu sou a <b>Luiza</b>, atendente da <b>Coliseu Joalheria</b> — joias, relógios e eyewear <b>desde 1968</b> 💛',
-    'Pode me contar sem pressa o que você está buscando, tá? Eu te ajudo em tudo: <b>escolher um presente</b> 🎁, ver <b>alianças</b> 💍, <b>relógios</b> ⌚ e <b>óculos</b> 🕶️, <b>agendar um atendimento VIP</b> ou achar a <b>loja mais próxima</b> de você — são <b>14 lojas no RS e SC</b> 📍<br><br>Me conta: o que você procura hoje?'
+    'Oi, tudo bem? 😊 Eu sou a <b>Luiza</b>, atendente da <b>Coliseu Joalheria</b>: joias, relógios e eyewear <b>desde 1968</b> 💛',
+    'Pode me contar sem pressa o que você está buscando, tá? Eu te ajudo em tudo: <b>escolher um presente</b> 🎁, ver <b>alianças</b> 💍, <b>relógios</b> ⌚ e <b>óculos</b> 🕶️, <b>agendar um atendimento VIP</b> ou achar a <b>loja mais próxima</b> de você. São <b>14 lojas no RS e SC</b> 📍<br><br>Me conta: o que você procura hoje?'
   ], ['Quero um presente 🎁','Alianças 💍','Relógios ⌚','Óculos 🕶️','Loja mais próxima 📍']);
 }
 
@@ -723,9 +723,9 @@ function pickList(){
 }
 const OCASIAO_LINHA = {
   pedido:      'Um pedido de casamento pede um anel inesquecível 💍✨',
-  bodas:       'Bodas pedem ouro e diamantes — momentos assim merecem peça de guardar 💛',
+  bodas:       'Bodas pedem ouro e diamantes. Momentos assim merecem peça de guardar 💛',
   aniversario: 'Aniversário é a desculpa perfeita pra uma joia de verdade 🎂✨',
-  nascimento:  'Nascimento é clássico de pingente e corrente — vira lembrança pra vida toda 👶💛',
+  nascimento:  'Nascimento é clássico de pingente e corrente, que vira lembrança pra vida toda 👶💛',
   formatura:   'Formatura pede uma peça que marque a conquista 🎓✨',
   natal:       'Presente de Natal da Coliseu chega em embalagem premium de presente 🎄',
   mimo:        'Um mimo sem ocasião é o melhor tipo de presente 😄✨'
@@ -735,10 +735,10 @@ function listar(introExtra){
   chat.lastList = list;
   const msgs = [];
   if (estourou){
-    msgs.push('Nesse valor exato o catálogo aperta um pouco, mas olha que opções lindas <b>bem pertinho</b> do seu orçamento — e tudo em <b>12x sem juros</b> 😉');
+    msgs.push('Nesse valor exato o catálogo aperta um pouco, mas olha que opções lindas <b>bem pertinho</b> do seu orçamento, e tudo em <b>12x sem juros</b> 😉');
   } else {
     const oc = chat.ocasiao && OCASIAO_LINHA[chat.ocasiao] ? OCASIAO_LINHA[chat.ocasiao] + '<br>' : '';
-    msgs.push(`${oc}${introExtra || 'Separei essas pra você'} — peças do nosso catálogo oficial:`);
+    msgs.push(`${oc}${introExtra || 'Separei essas pra você'}. Tudo do catálogo oficial, com foto real de cada peça:`);
   }
   list.forEach((p,i) => msgs.push(prodCardHTML(p, i+1)));
   msgs.push('Digite o <b>número</b> da peça pra ver detalhes, condições e como garantir a sua 😊');
@@ -747,9 +747,9 @@ function listar(introExtra){
 function detalhes(p){
   chat.sel = p;
   return { msgs: [
-    `<div class="pc-art pc-art-lg">${pecaIMG(p)}</div><span class="pc-cap">${p.nome} — ${CAT_LABEL[p.cat]} · foto oficial do catálogo</span>`,
+    `<div class="pc-art pc-art-lg">${pecaIMG(p)}</div><span class="pc-cap">${p.nome} · ${CAT_LABEL[p.cat]} · foto oficial do catálogo</span>`,
     `<b>${p.nome}</b> ✨<br>${p.desc}.<br><br>💎 Acompanha <b>certificado de autenticidade</b> e nota fiscal<br>🎁 Embalagem premium de presente <b>sem custo</b><br>🔄 Troca em até <b>30 dias</b> com frete grátis`,
-    `💰 <b>${p.aPartir ? 'a partir de ' : ''}${fmtBRL(p.preco)}</b> — ou <b>12x de ${fmtBRL2(Math.round(p.preco/12*100)/100)} sem juros</b> 💳<br>Também acumula <b>pontos Livelo</b> 💛<br><br>Como prefere?`
+    `💰 <b>${p.aPartir ? 'a partir de ' : ''}${fmtBRL(p.preco)}</b>, ou <b>12x de ${fmtBRL2(Math.round(p.preco/12*100)/100)} sem juros</b> 💳<br>Também acumula <b>pontos Livelo</b> 💛<br><br>Como prefere?`
   ], chips: ['Comprar agora 🛍️','Reservar na loja por 48h 📍','Atendimento VIP na loja 🥂','Ver outras opções'] };
 }
 
@@ -762,8 +762,8 @@ function askCidade(after, linha){
 }
 const TIPO_AGENDA = {
   alianca:  'Experiência Alianças 🥂',
-  vip:      'Atendimento VIP — presente',
-  reserva:  'Reserva — prova da peça',
+  vip:      'Atendimento VIP (presente)',
+  reserva:  'Reserva para prova da peça',
   conserto: 'Avaliação de conserto',
   visita:   'Atendimento VIP'
 };
@@ -780,7 +780,7 @@ function aposFilial(){
   const intro = {
     alianca: `Essa é a loja perfeita pra vocês 💍 A <b>Experiência Alianças</b> dura cerca de 40 min: espumante 🥂, medidor de aro, teste das ligas de ouro e <b>gravação gratuita</b> a laser. Quando fica bom?`,
     vip:     `A consultora <b>${f.consultora}</b> prepara um atendimento reservado, com as peças já separadas pelo seu perfil ✨ Quando fica bom pra você?`,
-    reserva: `Deixo a peça <b>reservada por 48h</b> com a <b>${f.consultora}</b> — sem compromisso. Quando você quer vir provar?`,
+    reserva: `Deixo a peça <b>reservada por 48h</b> com a <b>${f.consultora}</b>, sem compromisso nenhum. Quando você quer vir provar?`,
     conserto:`Nossa relojoaria própria faz a avaliação <b>na hora e sem custo</b> ⚙️ Quando fica bom levar a peça?`,
     visita:  `A consultora <b>${f.consultora}</b> vai adorar te receber ✨ Quer já deixar um horário reservado (sem compromisso)?`
   }[chat.after || 'visita'];
@@ -793,7 +793,7 @@ function confirmaAgenda(quando){
   const extra = chat.after === 'alianca' ? '<br>🥂 O espumante já fica gelando!' : '';
   chat.after = null;
   return { msgs: [
-    `Agendado! ✅ <b>${quando}</b> — ${f.nome}.<br>👩‍💼 A consultora <b>${f.consultora}</b> te espera com tudo preparado.${extra}`,
+    `Agendado! ✅ <b>${quando}</b> na ${f.nome}.<br>👩‍💼 A consultora <b>${f.consultora}</b> te espera com tudo preparado.${extra}`,
     `Te mando um lembrete aqui no WhatsApp 1 dia antes 😉<br><br><i>💡 Na operação real, este agendamento cai na hora no painel da loja e na agenda da consultora.</i>`
   ], chips: ['Ver mais peças','Quero comprar agora 🛍️','Cadastrar data especial 📅','Encerrar 😊'] };
 }
@@ -827,7 +827,7 @@ function fluxoPagamento(t){
     chat.pgto = 'Link 12x sem juros';
     return { msgs: [
       `Perfeito! 💳 Em <b>12x de ${fmtBRL2(Math.round(p.preco/12*100)/100)} sem juros</b>. Gerei seu link de pagamento seguro:`,
-      `<div class="link-card"><b>🔒 Pagamento seguro · Coliseu</b><span class="pay-sub">${p.nome} — ${fmtBRL2(p.preco)} em até 12x</span>
+      `<div class="link-card"><b>🔒 Pagamento seguro · Coliseu</b><span class="pay-sub">${p.nome} · ${fmtBRL2(p.preco)} em até 12x</span>
        <div class="pix-copia"><input class="px-inp" readonly value="https://pay.coliseu.com.br/c/${(p.id*7333).toString(36)}9x"><button class="btn-copiar" type="button">Copiar link</button></div></div>`,
       'O link expira em 24h. Assim que aprovar, te confirmo aqui na hora ⚡'
     ], chips: ['Paguei no link ✅','Prefiro PIX à vista','Falar com consultora'], fase:'pix_pendente' };
@@ -845,10 +845,10 @@ function confirmaPagamento(){
     'Pagamento confirmado! 🎉💛',
     `<div class="cert-card"><div class="cc-t">✦ Certificado de Autenticidade ✦</div>
      <div class="cc-n">${p.nome}<br>Pedido ${num} · NF-e emitida</div>
-     <div class="cc-l">Coliseu Joalheria — desde 1968<br>Garantia + troca em até 30 dias</div></div>`,
+     <div class="cc-l">Coliseu Joalheria · desde 1968<br>Garantia + troca em até 30 dias</div></div>`,
     `${entrega === 'Retirada em loja'
-        ? `🛍️ Sua peça estará pronta pra retirada <b>em até 2h</b> na <b>${f.nome}</b> — é só dizer seu nome à consultora <b>${f.consultora}</b>.`
-        : '🚚 Entrega expressa com <b>frete grátis</b>, embalagem premium de presente e… um chocolatinho da casa 🍫😄'}<br><br><i>💡 Pedido <b>${num}</b> registrado — na operação real ele cai em tempo real no painel da loja.</i>`,
+        ? `🛍️ Sua peça estará pronta pra retirada <b>em até 2h</b> na <b>${f.nome}</b>. É só dizer seu nome à consultora <b>${f.consultora}</b>.`
+        : '🚚 Entrega expressa com <b>frete grátis</b>, embalagem premium de presente e… um chocolatinho da casa 🍫😄'}<br><br><i>💡 Pedido <b>${num}</b> registrado. Na operação real ele cai em tempo real no painel da loja.</i>`,
     'Quer que eu <b>cadastre uma data especial</b> (aniversário, bodas…) pra eu te lembrar com sugestões 15 dias antes? 📅'
   ], chips: ['Cadastrar data especial 📅','Ver mais peças','Encerrar 😊'] };
 }
@@ -857,7 +857,7 @@ function confirmaPagamento(){
 /* intents fortes que "escapam" de qualquer fase pendente (cidade, data, presente…) */
 const FUGA = /troca|devolu|livelo|humano|consultora|atendente|falar com|horario|frete\b|conserto|quebrou|catalogo|alianca|relogio|oculos|prata|\bjoias?\b|presente|\bcaro\b|vou pensar|original|corporativ|\bloja\b|filial/;
 /* marcas e termos buscáveis no nome das peças */
-const TERMOS = /michael kors|armani exchange|emporio armani|jimmy choo|ray-?ban|miu miu|de sol|de grau|orient|seiko|bulova|citizen|diesel|fossil|guess|casio|smartwatch|solar\b|digital|cronografo|automatico|mergulho|persol|ferragamo|gucci|prada|versace|dior|burberry|oakley|carrera|fendi|celine|way\b|bubble|colosseo|tanzanita|esmeralda|safira|rubi|perola|zirconia/;
+const TERMOS = /michael kors|armani exchange|emporio armani|jimmy choo|ray-?ban|miu miu|de sol|de grau|orient|seiko|bulova|citizen|diesel|fossil|guess|casio|smartwatch|solar\b|digital|cronografo|automatico|mergulho|persol|ferragamo|gucci|prada|versace|dior|burberry|oakley|carrera|fendi|celine|way\b|bubble|colosseo|nido|plisse|rosee?\b|amore|sable|tanzanita|esmeralda|safira|rubi|perola|zirconia/;
 const termoDe = t2 => { const m = t2.match(TERMOS); return m ? m[0].replace(/-/g, ' ') : null; };
 function responder(raw){
   const t = norm(raw);
@@ -877,7 +877,7 @@ function responder(raw){
     if (/retir|na loja|buscar|pegar/.test(t)){ chat.entrega = 'Retirada em loja'; return askCidade('retirada','Ótimo, retirada é rapidinho! 🛍️'); }
     if (/entrega|expressa|casa|receber|enviar|correio|sedex/.test(t)){
       chat.entrega = 'Entrega expressa'; chat.fase = 'pagamento';
-      return { msgs:[ 'Fechado! 🚚 <b>Entrega expressa com frete grátis</b> — precisa de menos de 7 dias úteis? A gente prioriza por aqui.<br><br>Como prefere pagar?' ], chips:['PIX à vista 💚','Link 12x sem juros 💳'] };
+      return { msgs:[ 'Fechado! 🚚 <b>Entrega expressa com frete grátis</b>. Precisa de menos de 7 dias úteis? A gente prioriza por aqui.<br><br>Como prefere pagar?' ], chips:['PIX à vista 💚','Link 12x sem juros 💳'] };
     }
   }
 
@@ -888,7 +888,7 @@ function responder(raw){
     if (isPOA(t)) return { msgs:['Porto Alegre tem <b>8 lojas Coliseu</b> 😄 Qual região fica melhor pra você?'], chips:['Iguatemi','Moinhos','Praia de Belas','Barra Sul','Bourbon Ipiranga','Centro (Andradas)'] };
     if (outraCidade(t)){
       chat.fase = chat.sel ? 'entrega' : null;
-      return { msgs:[ 'Sem problema! 🚚 Nosso e-commerce entrega em <b>todo o Brasil com frete grátis</b> — e o atendimento continua comigo aqui no WhatsApp, do pedido à entrega ✨' ],
+      return { msgs:[ 'Sem problema! 🚚 Nosso e-commerce entrega em <b>todo o Brasil com frete grátis</b>, e o atendimento continua comigo aqui no WhatsApp, do pedido à entrega ✨' ],
                chips: chat.sel ? ['Entrega expressa 🚚','Ver outras opções'] : ['Ver catálogo','Quero um presente 🎁','Encerrar 😊'] };
     }
     if (!FUGA.test(t)) return { msgs:['Me diz a cidade (ou o bairro, se for Porto Alegre) que eu encontro a Coliseu mais perto de você 📍'], chips:['Porto Alegre','Canoas','Caxias do Sul','Novo Hamburgo','Passo Fundo','Balneário Camboriú','Joinville','Outra cidade'] };
@@ -899,7 +899,7 @@ function responder(raw){
   if (chat.fase === 'agendar_data'){
     if (/so passar|sem hora|qualquer hora|nao precisa/.test(t)){
       chat.fase = null; const f = chat.filial;
-      return { msgs:[`Combinado! A <b>${f.nome}</b> te espera — Seg–Sáb 10h–22h, Dom 14h–20h. Vou avisar a consultora <b>${f.consultora}</b> que você aparece por lá 😊`], chips:['Ver catálogo','Quero comprar agora 🛍️','Encerrar 😊'] };
+      return { msgs:[`Combinado! A <b>${f.nome}</b> te espera: Seg a Sáb das 10h às 22h, Dom das 14h às 20h. Vou avisar a consultora <b>${f.consultora}</b> que você aparece por lá 😊`], chips:['Ver catálogo','Quero comprar agora 🛍️','Encerrar 😊'] };
     }
     const m = raw.match(/hoje\s*\d{1,2}h?|amanh[aã]\s*\d{1,2}h?|s[aá]b(ado)?\s*\d{1,2}h?|\d{1,2}h(\d{2})?/i);
     if (m || /hoje|amanha|sabado|domingo|segunda|terca|quarta|quinta|sexta/.test(t)){
@@ -914,7 +914,7 @@ function responder(raw){
     if (/humano|consultora|atendente|falar com/.test(t)){ chat.fase = null; }
     else {
       chat.consertoItem = raw; chat.fase = null;
-      return askCidade('conserto', `Anotei: <b>"${raw}"</b> ✍️ Nossa relojoaria e ourivesaria própria resolve isso — avaliação <b>gratuita e na hora</b>.`);
+      return askCidade('conserto', `Anotei: <b>"${raw}"</b> ✍️ Nossa relojoaria e ourivesaria própria resolve isso: avaliação <b>gratuita e na hora</b>.`);
     }
   }
 
@@ -924,7 +924,7 @@ function responder(raw){
     chat.fase = null;
     return { msgs: [
       `Anotado! 📅 <b>${raw}</b> ficou salvo no seu perfil.`,
-      '15 dias antes eu te chamo aqui com sugestões escolhidas pro seu histórico — assim você <b>nunca mais corre atrás de presente em cima da hora</b> 😄💛<br><br><i>💡 É assim que o robô transforma datas em recompra: cada cliente vira um relacionamento de longo prazo.</i>'
+      '15 dias antes eu te chamo aqui com sugestões escolhidas pro seu histórico. Assim você <b>nunca mais corre atrás de presente em cima da hora</b> 😄💛<br><br><i>💡 É assim que o robô transforma datas em recompra: cada cliente vira um relacionamento de longo prazo.</i>'
     ], chips: ['Ver catálogo','Quero um presente 🎁','Encerrar 😊'] };
   }
 
@@ -932,8 +932,8 @@ function responder(raw){
   if (/humano|atendente|consultora|consultor|pessoa|gente de verdade|falar com alguem|falar com uma/.test(t)){
     const f = chat.filial || filialById('iguatemi');
     return { msgs: [
-      `Claro, imagina! 👩‍💼 Vou te passar pra minha colega <b>${f.consultora}</b>, da ${f.nome}. Ela continua daqui em instantes <b>com todo o histórico do nosso papo</b> — você não vai precisar repetir nada, tá?`,
-      '<i>— Na operação real é aqui que o time humano recebe o lead já qualificado, com peça, orçamento e loja anotados. Pode continuar testando! 😉</i>'
+      `Claro, imagina! 👩‍💼 Vou te passar pra minha colega <b>${f.consultora}</b>, da ${f.nome}. Ela continua daqui em instantes <b>com todo o histórico do nosso papo</b>, você não vai precisar repetir nada, tá?`,
+      '<i>Na operação real é aqui que o time humano recebe o lead já qualificado, com peça, orçamento e loja anotados. Pode continuar testando! 😉</i>'
     ], chips: ['Ver catálogo','Quero um presente 🎁','Alianças 💍'] };
   }
 
@@ -943,28 +943,28 @@ function responder(raw){
     const alt = pickList().list[0];
     chat.cat = null;
     return { msgs: [
-      'Te entendo perfeitamente 😊 Joia é investimento — e tem 3 caminhos pra caber no bolso <b>sem perder o brilho</b>:',
+      'Te entendo perfeitamente 😊 Joia é investimento, e tem 3 caminhos pra caber no bolso <b>sem perder o brilho</b>:',
       `1️⃣ <b>12x sem juros</b> em qualquer peça 💳<br>2️⃣ A linha <b>For Me em prata 925</b> tem o mesmo DNA Coliseu a partir de <b>R$ 490</b> ✨<br>3️⃣ Suas compras acumulam <b>pontos Livelo</b> 💛`,
       alt ? prodCardHTML(alt) : 'Olha a linha For Me: prata 925 com design autoral 💛',
-      'E se quiser, a consultora monta <b>condições especiais na loja</b> — quer que eu agende?'
+      'E se quiser, a consultora monta <b>condições especiais na loja</b>. Quer que eu agende?'
     ], chips: ['Ver linha For Me (prata)','Atendimento VIP na loja 🥂','12x me atende 💳'] };
   }
   if (/vou pensar|te falo depois|depois eu|mais tarde|outro dia|deixa pra depois/.test(t)){
     return { msgs: [
-      'Claro, joia é decisão do coração — sem pressa nenhuma 💛',
+      'Claro, joia é decisão do coração, sem pressa nenhuma 💛',
       'Só um cuidado: peças como as da <b>coleção Way</b> são <b>produção limitada</b>. Posso <b>reservar por 48h sem compromisso</b> no seu nome, ou te mandar um <b>resumo com as peças e valores</b> pra decidir com calma. O que prefere?'
     ], chips: ['Reservar por 48h 📍','Me manda o resumo 📋','Cadastrar data especial 📅'] };
   }
   if (/resumo/.test(t)){
     const l = chat.lastList.length ? chat.lastList : [PRODUTOS[0], PRODUTOS[12]];
     return { msgs: [
-      `📋 <b>Seu resumo Coliseu</b><br>${l.map(p => `• ${p.nome} — ${fmtBRL(p.preco)} (12x de ${fmtBRL2(Math.round(p.preco/12*100)/100)})`).join('<br>')}<br><br>Fica salvo aqui no nosso chat — quando decidir, é só me chamar que finalizo em 2 minutos 😉`,
+      `📋 <b>Seu resumo Coliseu</b>${l.map(p => `<div class="mini-item"><img src="${p.img}" alt="${p.nome}" loading="lazy"><span class="mi-t"><b>${p.nome}</b><br>${fmtBRL(p.preco)} · 12x de ${fmtBRL2(Math.round(p.preco/12*100)/100)} sem juros</span></div>`).join('')}Fica salvo aqui no nosso chat. Quando decidir, é só me chamar que finalizo em 2 minutos 😉`,
     ], chips: ['Quero comprar agora 🛍️','Reservar por 48h 📍','Encerrar 😊'] };
   }
   if (/original|falsific|autentic|confia|seguro|golpe|verdade|procedencia|banhado|banho/.test(t)){
     return { msgs: [
-      'Pode ficar tranquilo(a) 💛 A Coliseu está no mercado <b>desde 1968</b> — são 14 lojas físicas nos principais shoppings do RS e SC.',
-      '✦ Toda peça sai com <b>certificado de autenticidade + nota fiscal</b><br>✦ Ouro <b>18k</b> e prata <b>925</b> com teor garantido — nada de banho que sai<br>✦ Relógios e óculos são de <b>distribuição oficial</b> das marcas<br>✦ Troca em até <b>30 dias</b> e devolução em 7, com frete grátis<br><br>E se preferir ver pessoalmente, te recebo em qualquer loja com um cafezinho ☕😄'
+      'Pode ficar tranquilo(a) 💛 A Coliseu está no mercado <b>desde 1968</b>, com 14 lojas físicas nos principais shoppings do RS e SC.',
+      '✦ Toda peça sai com <b>certificado de autenticidade + nota fiscal</b><br>✦ Ouro <b>18k</b> e prata <b>925</b> com teor garantido, nada de banho que sai<br>✦ Relógios e óculos são de <b>distribuição oficial</b> das marcas<br>✦ Troca em até <b>30 dias</b> e devolução em 7, com frete grátis<br><br>E se preferir ver pessoalmente, te recebo em qualquer loja com um cafezinho ☕😄'
     ], chips: ['Atendimento VIP na loja 🥂','Ver catálogo','Loja mais próxima 📍'] };
   }
 
@@ -973,28 +973,28 @@ function responder(raw){
     return { msgs: ['Nossa política <b>Super Trocas</b> é das mais tranquilas do Brasil 😊<br><br>🔄 <b>Troca em até 30 dias</b><br>↩️ <b>Devolução em até 7 dias</b><br>🚚 Sempre com <b>frete grátis</b> e atendimento humano<br><br>Anéis e alianças ainda têm <b>ajuste de aro</b> na nossa ourivesaria própria ✨'], chips: ['Ver catálogo','Loja mais próxima 📍','Encerrar 😊'] };
   }
   if (/livelo|pontos|milhas/.test(t)){
-    return { msgs: ['Sim! 💛 A Coliseu é parceira <b>Livelo</b>: suas compras <b>acumulam pontos</b> que viram viagens, produtos e mais. É só informar seu CPF na finalização — vale no site, no WhatsApp e nas lojas ✨'], chips: ['Ver catálogo','Quero um presente 🎁'] };
+    return { msgs: ['Sim! 💛 A Coliseu é parceira <b>Livelo</b>: suas compras <b>acumulam pontos</b> que viram viagens, produtos e mais. É só informar seu CPF na finalização, e vale no site, no WhatsApp e nas lojas ✨'], chips: ['Ver catálogo','Quero um presente 🎁'] };
   }
   if (/horario|que horas|abre|fecha|funciona|aberto|domingo/.test(t)){
-    return { msgs: ['🕐 Nossas lojas seguem o horário dos shoppings: <b>Seg–Sáb 10h–22h · Dom 14h–20h</b> (a Andradas, no Centro Histórico, tem horário de rua).<br><br>Mas <b>eu atendo 24h</b> — pode comprar agora que a loja fecha, eu não 😄✨'], chips: ['Loja mais próxima 📍','Ver catálogo'] };
+    return { msgs: ['🕐 Nossas lojas seguem o horário dos shoppings: <b>Seg a Sáb das 10h às 22h · Dom das 14h às 20h</b> (a Andradas, no Centro Histórico, tem horário de rua).<br><br>Mas <b>eu atendo 24h</b>: pode comprar agora que a loja fecha, eu não 😄✨'], chips: ['Loja mais próxima 📍','Ver catálogo'] };
   }
   if (/frete|entrega|prazo|chega|envio|correio/.test(t) && !chat.sel){
-    return { msgs: ['🚚 <b>Frete grátis para todo o Brasil</b>, sempre.<br>⚡ Precisa <b>em menos de 7 dias úteis</b>? Me avisa que a gente prioriza.<br>🛍️ E tem <b>compre e retire</b>: pedido pronto <b>em 2h</b> em qualquer uma das 14 lojas.<br><br>📦 Tudo vai em embalagem premium de presente — com direito a chocolatinho 🍫😄'], chips: ['Ver catálogo','Loja mais próxima 📍'] };
+    return { msgs: ['🚚 <b>Frete grátis para todo o Brasil</b>, sempre.<br>⚡ Precisa <b>em menos de 7 dias úteis</b>? Me avisa que a gente prioriza.<br>🛍️ E tem <b>compre e retire</b>: pedido pronto <b>em 2h</b> em qualquer uma das 14 lojas.<br><br>📦 Tudo vai em embalagem premium de presente, com direito a chocolatinho 🍫😄'], chips: ['Ver catálogo','Loja mais próxima 📍'] };
   }
   if (/corporativ|empresa|brinde|funcionario|equipe|cnpj|homenagem/.test(t)){
-    return { msgs: ['Temos um <b>atendimento corporativo</b> dedicado 👔 — presentes para equipes, homenagens de tempo de casa e brindes premium, com condições especiais por volume e faturamento para CNPJ.','Vou acionar nosso especialista corporativo com seu contato, e ele te chama ainda hoje. Enquanto isso, quer ver ideias de presente?'], chips: ['Ver relógios ⌚','Ver canetas… ops, joias 😄','Falar com consultora'] };
+    return { msgs: ['Temos um <b>atendimento corporativo</b> dedicado 👔: presentes para equipes, homenagens de tempo de casa e brindes premium, com condições especiais por volume e faturamento para CNPJ.','Vou acionar nosso especialista corporativo com seu contato, e ele te chama ainda hoje. Enquanto isso, quer ver ideias de presente?'], chips: ['Ver relógios ⌚','Ver canetas… ops, joias 😄','Falar com consultora'] };
   }
 
   /* ---- lembrete (gatilho direto) ---- */
   if (/data especial|lembrete|me lembra|aniversario dela|aniversario dele|cadastrar data/.test(t)){
     chat.fase = 'lembrete_data';
-    return { msgs: ['Adoro isso! 📅 Me conta a <b>data e a ocasião</b> — por exemplo: <i>"12/09 — aniversário da Júlia"</i> ou <i>"03/11 — bodas de 10 anos"</i>.'], chips: ['12/09 — aniversário da Júlia','03/11 — bodas de 10 anos'] };
+    return { msgs: ['Adoro isso! 📅 Me conta a <b>data e a ocasião</b>. Por exemplo: <i>"12/09, aniversário da Júlia"</i> ou <i>"03/11, bodas de 10 anos"</i>.'], chips: ['12/09, aniversário da Júlia','03/11, bodas de 10 anos'] };
   }
 
   /* ---- conserto ---- */
   if (/consert|quebrou|parou|arrumar|manutencao|bateria|pulseira soltou|ajuste|solda|banho novo|restaur/.test(t)){
     chat.fase = 'conserto_desc';
-    return { msgs: ['Consertamos sim! ⚙️ Temos <b>relojoaria e ourivesaria própria</b> — troca de bateria, ajuste de pulseira, solda, ajuste de aro, banho e restauração.<br><br>Me conta rapidinho: <b>qual é a peça e o que aconteceu?</b>'], chips: ['Relógio parou de funcionar','Ajustar aro de anel','Corrente arrebentou'] };
+    return { msgs: ['Consertamos sim! ⚙️ Temos <b>relojoaria e ourivesaria própria</b>: troca de bateria, ajuste de pulseira, solda, ajuste de aro, banho e restauração.<br><br>Me conta rapidinho: <b>qual é a peça e o que aconteceu?</b>'], chips: ['Relógio parou de funcionar','Ajustar aro de anel','Corrente arrebentou'] };
   }
 
   /* ---- loja mais próxima / cidades citadas soltas ---- */
@@ -1018,9 +1018,9 @@ function responder(raw){
         return { msgs: ['E até <b>quanto</b> você pensa em investir? 💎'], chips: ['Até R$ 1.000','R$ 1.000 a 3.000','R$ 3.000 a 7.000','Acima de R$ 7.000','Me surpreende ✨'] };
       }
       chat.fase = 'presente_ocasiao';
-      return { msgs: ['Ótimo! E qual é a <b>ocasião</b>? ✨'], chips: ['Aniversário','Aniversário de casamento','Pedido de casamento 💍','Nascimento','Sem ocasião — um mimo 😄'] };
+      return { msgs: ['Ótimo! E qual é a <b>ocasião</b>? ✨'], chips: ['Aniversário','Aniversário de casamento','Pedido de casamento 💍','Nascimento','Sem ocasião, um mimo 😄'] };
     }
-    if (!FUGA.test(t)) return { msgs: ['Me conta pra quem é o presente 🎁 — assim acerto em cheio no estilo.'], chips: ['Pra ela 💛','Pra ele','É pra mim 😄'] };
+    if (!FUGA.test(t)) return { msgs: ['Me conta pra quem é o presente 🎁 Assim acerto em cheio no estilo.'], chips: ['Pra ela 💛','Pra ele','É pra mim 😄'] };
     chat.fase = null;
   }
   if (chat.fase === 'presente_ocasiao'){
@@ -1051,7 +1051,7 @@ function responder(raw){
     return askCidade('alianca','Vai ser lindo! 🥂');
   }
   if (/gravacao|gravar/.test(t)){
-    return { msgs: ['A <b>gravação interna é gratuita</b> ✨ — nomes, data ou uma frase de vocês, feita a laser na hora, na própria loja. Muitos casais gravam as coordenadas de onde se conheceram 🥹💛'], chips: ['Agendar Experiência Alianças 🥂','Ver alianças 💍'] };
+    return { msgs: ['A <b>gravação interna é gratuita</b> ✨ Nomes, data ou uma frase de vocês, feita a laser na hora, na própria loja. Muitos casais gravam as coordenadas de onde se conheceram 🥹💛'], chips: ['Agendar Experiência Alianças 🥂','Ver alianças 💍'] };
   }
   if (/alianca|noiv|vamos casar|casar\b|pedido de casamento/.test(t) && !/aniversario de casamento|bodas/.test(t)){
     chat.cat = 'alianca'; chat.art = null;
@@ -1060,7 +1060,7 @@ function responder(raw){
     return { msgs: [
       'Que momento especial! 💍✨ Nossas alianças são em <b>ouro 18k</b>, feitas na nossa ourivesaria, com <b>gravação interna gratuita</b> a laser.',
       ...par.map((p,i) => prodCardHTML(p, i+1)),
-      `O ideal é viverem a <b>Experiência Alianças</b> na loja: espumante 🥂, medidor de aro e teste das ligas — <b>sem compromisso</b>. Temos <b>${PRODUTOS.filter(p => p.cat === 'alianca').length} modelos</b> no catálogo — quer ver outros ou já agendar?`
+      `O ideal é viverem a <b>Experiência Alianças</b> na loja: espumante 🥂, medidor de aro e teste das ligas, <b>sem compromisso</b>. Temos <b>${PRODUTOS.filter(p => p.cat === 'alianca').length} modelos</b> no catálogo. Quer ver outros ou já agendar?`
     ], chips: ['Agendar Experiência Alianças 🥂','1','2','3','Ver outras opções'] };
   }
 
@@ -1090,7 +1090,7 @@ function responder(raw){
     }
     if (!chat.ocasiao){ chat.fase = 'presente_ocasiao';
       return { msgs: [`${chat.quem === 'ela' ? 'Ela vai amar 💛' : chat.quem === 'ele' ? 'Ele vai amar 👌' : 'Autopresente é dos melhores 😄'} E qual é a <b>ocasião</b>?`],
-               chips: ['Aniversário','Aniversário de casamento','Pedido de casamento 💍','Nascimento','Sem ocasião — um mimo 😄'] };
+               chips: ['Aniversário','Aniversário de casamento','Pedido de casamento 💍','Nascimento','Sem ocasião, um mimo 😄'] };
     }
     if (!chat.budget && !chat.min){ chat.fase = 'presente_budget';
       return { msgs: ['E até <b>quanto</b> você pensa em investir? 💎'], chips: ['Até R$ 1.000','R$ 1.000 a 3.000','R$ 3.000 a 7.000','Acima de R$ 7.000','Me surpreende ✨'] };
@@ -1104,13 +1104,13 @@ function responder(raw){
     if (/femin|dela|esposa|mulher/.test(t)) chat.quem = 'ela';
     else if (/masculin|homem|marido|\bpai\b|esposo/.test(t)) chat.quem = 'ele';
     const b = detectBudget(t); if (b){ chat.budget = b.max || null; chat.min = b.min || null; }
-    return listar('⌚ Design, precisão e exclusividade — do clássico ao colecionável. Olha só');
+    return listar('⌚ Design, precisão e exclusividade, do clássico ao colecionável. Olha só');
   }
   if (/oculos|armacao|grau|de sol|miu miu|persol|ferragamo|lente|ray-?ban|gucci|prada|versace|dior|burberry|oakley|carrera|jimmy choo|fendi|celine/.test(t)){
     chat.cat = 'oculos'; chat.art = null; chat.termo = termoDe(t);
     if (/femin|dela|esposa|mulher/.test(t)) chat.quem = 'ela';
     else if (/masculin|homem|marido|\bpai\b|esposo/.test(t)) chat.quem = 'ele';
-    return listar('🕶️ Nosso eyewear é de distribuição oficial — e as lojas têm ótica própria pras lentes de grau. Destaques');
+    return listar('🕶️ Nosso eyewear é de distribuição oficial, e as lojas têm ótica própria pras lentes de grau. Destaques');
   }
   const catDaFrase = t2 => /\bouro\b|18k|diamante/.test(t2) ? 'joia' : /prata|925|for me|bubble|zirconia/.test(t2) ? 'prata' : null;
   if (/gargantilha|colar|corrente/.test(t)){ chat.art = 'colar'; chat.cat = catDaFrase(t); chat.termo = termoDe(t); return listar('Colares e gargantilhas que separei'); }
@@ -1120,14 +1120,33 @@ function responder(raw){
   if (/pulseira/.test(t)){ chat.art = 'pulseira'; chat.cat = catDaFrase(t); chat.termo = termoDe(t); return listar('Pulseiras que separei'); }
   if (/prata|for me|bubble|zirconia|925/.test(t)){
     chat.cat = 'prata'; chat.art = null; chat.termo = termoDe(t);
-    return listar('✨ <b>For Me by Coliseu</b> — prata 925 com design autoral, a porta de entrada do universo Coliseu');
+    return listar('✨ <b>For Me by Coliseu</b>: prata 925 com design autoral, a porta de entrada do universo Coliseu');
   }
-  if (/joia|ouro|diamante|esmeralda|safira|rubi|way\b|18k/.test(t)){
+  if (/joia|ouro|diamante|esmeralda|safira|rubi|way\b|18k|colecao|nido|plisse|rosee|colosseo|amore\b|sable\b/.test(t)){
     chat.cat = 'joia'; chat.art = null; chat.termo = termoDe(t);
     const b = detectBudget(t); if (b){ chat.budget = b.max || null; chat.min = b.min || null; }
-    return listar('💎 Ouro 18k e diamantes das nossas coleções autorais — olha só');
+    return listar('💎 Ouro 18k e diamantes das nossas coleções autorais, olha só');
   }
-  if (/catalogo|ver tudo|opcoes|opcao|mostra|sugest|novidade|lancamento|ver mais|outras opcoes|ver outra/.test(t)){
+  /* ---- promoção / The Sale ---- */
+  if (/promoc|liquidac|the sale|\bsale\b|oferta|queima/.test(t)){
+    chat.cat = null; chat.art = null; chat.budget = null; chat.min = null; chat.termo = null;
+    return listar('🔥 A <b>The Sale</b> está no ar: é a nossa maior liquidação do ano, e eu te mostro as queridinhas');
+  }
+  /* ---- acompanhar pedido ---- */
+  if (/\bcl-?\s?\d{3,}/.test(t)){
+    return { msgs: [
+      `Achei! ✅ Pedido <b>${raw.trim().toUpperCase().match(/CL-?\s?\d+/)[0].replace(/\s/g,'')}</b>: pagamento confirmado e peça em separação na nossa central 💛`,
+      'Sai pra entrega ainda hoje, com frete grátis. E pode deixar que eu te aviso aqui a cada etapa, da separação à entrega 🚚💨'
+    ], chips: ['Ver catálogo','Quero um presente 🎁','Encerrar 😊'] };
+  }
+  if (/acompanhar|rastrear|rastreio|status do pedido|meu pedido|cade o pedido|onde esta o pedido/.test(t)){
+    return { msgs: ['Claro! 📦 Me passa o <b>número do pedido</b> (começa com CL) que eu te trago o status na hora. Se preferir, também te mando o link de rastreio 😉'], chips: ['CL-2481','Falar com consultora'] };
+  }
+  /* ---- newsletter ---- */
+  if (/cadastrar para receber|receber as novidades|newsletter|cadastrar meu email|receber ofertas/.test(t)){
+    return { msgs: ['Feito! 💛 Você vai receber em primeira mão os lançamentos, a The Sale e condições exclusivas, direto por aqui (e sem spam, prometo 😄)','Enquanto isso, quer dar uma espiadinha nos destaques de agora?'], chips: ['Ver destaques ✨','Quero um presente 🎁','Encerrar 😊'] };
+  }
+  if (/catalogo|ver tudo|opcoes|opcao|mostra|sugest|novidade|lancamento|destaque|ver mais|outras opcoes|ver outra/.test(t)){
     if (/outras opcoes|ver outra|ver mais/.test(t) && chat.lastList.length){
       const atuais = chat.lastList.map(p => p.id);
       const resto = PRODUTOS.filter(p => p.cat !== 'alianca' && !atuais.includes(p.id) && (chat.cat ? p.cat === chat.cat : true)).slice(0,3);
@@ -1148,7 +1167,7 @@ function responder(raw){
   }
 
   /* ---- ações sobre a peça selecionada ---- */
-  if (/comprar|fechar|quero ess|vou levar|finalizar|pode ser ess/.test(t)){
+  if (/comprar|fechar|quero ess|vou levar|finalizar|pode ser ess|12x me atende|pode parcelar/.test(t)){
     if (!chat.sel && chat.lastList.length === 1) chat.sel = chat.lastList[0];
     if (!chat.sel){
       const r = listar('Me diz qual dessas você quer garantir');
@@ -1156,7 +1175,7 @@ function responder(raw){
       return r;
     }
     chat.fase = 'entrega';
-    return { msgs: [`Excelente escolha! ✨ <b>${chat.sel.nome}</b> — ${fmtBRL(chat.sel.preco)} (ou 12x sem juros).<br><br>Como você prefere receber?`],
+    return { msgs: [`Excelente escolha! ✨<div class="mini-item"><img src="${chat.sel.img}" alt="${chat.sel.nome}" loading="lazy"><span class="mi-t"><b>${chat.sel.nome}</b><br>${fmtBRL(chat.sel.preco)} · até 12x sem juros 💳</span></div>Como você prefere receber?`],
              chips: ['Entrega expressa 🚚','Retirar na loja em 2h 🛍️'] };
   }
   if (/reservar|reserva|separa|guardar/.test(t)){
@@ -1182,7 +1201,7 @@ function responder(raw){
 
   /* ---- despedida / saudação ---- */
   if (/encerrar|tchau|obrigad|valeu|ate mais|so isso/.test(t)){
-    return { msgs: ['Foi um prazer falar contigo! 💛 Qualquer coisa me chama, <b>eu fico por aqui 24h</b>, todos os dias 😊<br><br><i>Luiza · Coliseu Joalheria — o Melhor Atendimento do Mundo, agora também digital ✦</i>'], chips: ['Recomeçar conversa','Quero um presente 🎁'] };
+    return { msgs: ['Foi um prazer falar contigo! 💛 Qualquer coisa me chama, <b>eu fico por aqui 24h</b>, todos os dias 😊<br><br><i>Luiza · Coliseu Joalheria · o Melhor Atendimento do Mundo, agora também digital ✦</i>'], chips: ['Recomeçar conversa','Quero um presente 🎁'] };
   }
   if (/recomecar|reiniciar|comecar de novo/.test(t)){ resetChat(); return null; }
   if (/^(oi+|ola+|bom dia|boa tarde|boa noite|opa|eai|hey|hello)[!,. 😊🙂👋]*$/.test(t)){
@@ -1191,7 +1210,7 @@ function responder(raw){
   }
 
   /* ---- fallback ---- */
-  return { msgs: ['Te entendi! 😊 Quero resolver isso direitinho pra você — já anotei aqui e, se precisar, uma colega do time te confirma os detalhes. Enquanto isso, me deixa te ajudar com:'],
+  return { msgs: ['Te entendi! 😊 Quero resolver isso direitinho pra você. Já anotei aqui e, se precisar, uma colega do time te confirma os detalhes. Enquanto isso, me deixa te ajudar com:'],
            chips: ['Quero um presente 🎁','Alianças 💍','Relógios ⌚','Óculos 🕶️','Loja mais próxima 📍','Falar com consultora'] };
 }
 
