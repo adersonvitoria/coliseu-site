@@ -108,13 +108,29 @@ const zapFab = document.getElementById('zapFab');
 const zapBadge = document.getElementById('zapBadge');
 let zapIniciado = false;
 
+/* no celular o chat vira tela cheia: trava a rolagem da página atrás */
+const ehMobile = () => window.matchMedia('(max-width:640px)').matches;
+let scrollTravado = 0;
+
 function abrirZap(){
   zapPop.classList.add('on');
   zapBadge.style.display = 'none';
+  if (ehMobile()){
+    scrollTravado = window.scrollY;
+    document.body.style.top = (-scrollTravado) + 'px';
+    document.body.classList.add('zap-aberto');
+  }
   if (!zapIniciado){ zapIniciado = true; resetChat(); }
-  setTimeout(() => chatInput && chatInput.focus(), 350);
+  setTimeout(() => { if (!ehMobile() && chatInput) chatInput.focus(); }, 350);
 }
-function fecharZap(){ zapPop.classList.remove('on'); }
+function fecharZap(){
+  zapPop.classList.remove('on');
+  if (document.body.classList.contains('zap-aberto')){
+    document.body.classList.remove('zap-aberto');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollTravado);
+  }
+}
 
 zapFab.addEventListener('click', () => zapPop.classList.contains('on') ? fecharZap() : abrirZap());
 document.getElementById('zapFechar').addEventListener('click', fecharZap);

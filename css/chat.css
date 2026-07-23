@@ -46,6 +46,7 @@
 .chip{
   background:#fff;border:1px solid #00a884;color:#00806a;
   font-size:12px;font-weight:600;border-radius:18px;padding:6px 13px;transition:all .18s;
+  flex-shrink:0;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;
 }
 .chip:hover{background:#e7f8f3;color:#00614f}
 .wa-foot{display:flex;gap:9px;padding:9px 12px 12px;background:var(--wa-2);flex-shrink:0}
@@ -140,3 +141,26 @@
 .mini-item{display:flex;align-items:center;gap:10px;margin:8px 0;text-align:left}
 .mini-item img{width:46px;height:46px;border-radius:9px;object-fit:cover;border:1px solid #e5d9c2;background:#fff;flex:0 0 46px}
 .mini-item .mi-t{font-size:12.5px;line-height:1.45;color:#2c2c2c}
+
+/* ===== celular: chat em tela cheia, nada escondido ===== */
+@media (max-width:640px){
+  .zap-pop{
+    left:0;right:0;top:0;bottom:0;width:100%;max-width:none;
+    filter:none;transform:translateY(30px);
+  }
+  .zap-pop.on{transform:none}
+  .zap-pop .screen{
+    height:100vh;height:100dvh;max-height:none;
+    border-radius:0;border:none;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .wa-top{padding-top:calc(11px + env(safe-area-inset-top))}
+  .wa-body{overflow-x:hidden}
+  .zap-sugg{display:none}
+  .chips{max-height:none;overflow-y:visible;padding:10px 12px 11px}
+  .chip{font-size:13px;padding:8px 14px}
+  .wa-foot input{font-size:16px}
+  .pc-img{max-width:100%}
+  body.zap-aberto{position:fixed;left:0;right:0;width:100%;overflow:hidden}
+  body.zap-aberto .zap-fab{display:none}
+}

@@ -337,8 +337,6 @@ footer a:hover{color:#111}
   .cardq img{padding:8px}
   .prod .nm{min-height:0}
   .zap-fab{right:14px;bottom:14px;width:56px;height:56px}
-  .zap-pop{right:8px;left:8px;bottom:82px;width:auto;max-width:none}
-  .zap-pop .screen{height:min(74vh,590px)}
   .euquero span{font-size:18px;padding:14px 20px}
   .depo{padding:18px}
 }
