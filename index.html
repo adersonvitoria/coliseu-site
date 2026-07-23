@@ -8,112 +8,200 @@
 <link rel="icon" href="logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
 <link rel="stylesheet" href="css/chat.css">
 </head>
 <body>
 
-<!-- faixa de vantagens -->
-<div class="strip">FRETE GRÁTIS PARA TODO O BRASIL &nbsp;·&nbsp; ATÉ 12X SEM JUROS &nbsp;·&nbsp; SUPER TROCAS: 30 DIAS &nbsp;·&nbsp; PONTOS LIVELO</div>
+<!-- ===== barra superior (3 colunas, como no site real) ===== -->
+<div class="topbar">
+  <a href="#lojas" class="tb-l">📍 Encontre a loja mais próxima</a>
+  <button class="tb-c" data-zap="">‹ &nbsp;Compre pelo WhatsApp&nbsp; ›</button>
+  <button class="tb-r" data-zap="Quero acompanhar meu pedido">👤 Minha conta</button>
+</div>
 
-<!-- header -->
+<!-- ===== header ===== -->
 <header class="topo">
   <a class="logo" href="#"><img src="logo.webp" alt="Coliseu"></a>
   <nav>
     <a href="#joias">Joias</a>
+    <a href="#" data-zap="Vocês têm alianças de casamento?">Eu Aceito</a>
+    <a href="#" data-zap="Quero ver joias com diamantes">Diamantes que Brilham Mais</a>
     <a href="#relogios">Relógios</a>
-    <a href="#oculos">Óculos</a>
+    <a href="#eyewear" data-zap="Quero óculos de sol">Óculos de Sol</a>
+    <a href="#armacoes">Óculos de Grau</a>
     <a href="#forme">For Me</a>
-    <a href="#joias" data-zap="Vocês têm alianças de casamento?">Alianças</a>
-    <a href="#lojas">Nossas Lojas</a>
+    <a href="#relogios">Marcas</a>
+    <a href="#" class="sale" data-zap="Quais peças estão em promoção?">Sale</a>
   </nav>
-  <div class="acoes">
-    <button class="ico" id="btnBusca" title="Buscar">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+  <form class="busca" id="formBusca">
+    <input id="inpBusca" type="text" placeholder="O que você procura?">
+    <button type="submit" title="Buscar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
     </button>
-    <button class="ico" id="btnSacola" title="Sacola">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
-    </button>
-  </div>
+  </form>
+  <button class="ico" id="btnSacola" title="Sacola">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+  </button>
 </header>
 
-<!-- hero -->
+<!-- ===== hero slider full-width ===== -->
 <section class="hero">
-  <div class="slide on" style="background-image:url('img/hero-1.webp')">
-    <div class="h-caption">
-      <div class="h-tag">Nova coleção</div>
-      <h1>Nido</h1>
-      <p>Esmeraldas e ouro 18k, inspiradas na natureza.</p>
-      <button class="btn-zap-hero" data-zap="Quero ver a coleção Nido">Comprar pelo WhatsApp
-        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .3-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5 0 0-.2.3-.3.4-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.2 2.1 1.3.3.1.4.1.6-.1.1-.1.6-.7.8-1 .2-.3.4-.2.6-.1.3.1 1.6.8 1.9.9.3.2.5.2.5.4.1.1.1.7-.1 1.2z"/></svg>
-      </button>
-    </div>
+  <div class="slide on"><img src="img/hero-sale.webp" alt="The Sale — a maior liquidação de joias do Brasil">
+    <button class="h-cta" data-zap="Quais peças estão em promoção?">Escolha agora</button>
   </div>
-  <div class="slide" style="background-image:url('img/hero-2.webp')">
-    <div class="h-caption">
-      <div class="h-tag">Coleção</div>
-      <h1>Colosseo</h1>
-      <p>Arquitetura e tridimensionalidade em ouro.</p>
-      <button class="btn-zap-hero" data-zap="Quero ver a coleção Colosseo">Comprar pelo WhatsApp
-        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
-      </button>
-    </div>
+  <div class="slide"><img src="img/col-nido.webp" alt="Coleção Nido">
+    <button class="h-cta" data-zap="Quero ver a coleção Nido">Comprar pelo WhatsApp ›</button>
   </div>
-  <div class="dots"><i class="on"></i><i></i></div>
+  <button class="h-seta e" id="heroPrev">‹</button>
+  <button class="h-seta d" id="heroNext">›</button>
+  <div class="dots" id="heroDots"><i class="on"></i><i></i></div>
 </section>
 
-<!-- categorias -->
-<section class="cats wrap">
-  <a class="cat" href="#joias"><img src="pecas/p2.webp" alt=""><span>Joias</span></a>
-  <a class="cat" href="#relogios"><img src="pecas/p13.webp" alt=""><span>Relógios</span></a>
-  <a class="cat" href="#oculos"><img src="pecas/p15.webp" alt=""><span>Óculos</span></a>
-  <a class="cat" href="#forme"><img src="pecas/p6.webp" alt=""><span>For Me · Prata</span></a>
-</section>
-
-<!-- seções de produtos (renderizadas pelo catálogo real) -->
-<section class="sec wrap" id="joias">
-  <div class="sec-head"><h2>Joias em destaque</h2><span>ouro 18k · diamantes · pedras preciosas</span></div>
-  <div class="grid" data-grid="joia"></div>
-</section>
-
-<section class="faixa-mam">
-  <div class="wrap fm">
-    <div>
-      <h3>O <em>Melhor Atendimento do Mundo</em> está em nosso DNA.</h3>
-      <p>Agora também no WhatsApp — 24 horas, com o catálogo completo, reserva em loja e experiência de alianças.</p>
-    </div>
-    <button class="btn-dourado" data-zap="">Falar com a Coliseu no WhatsApp</button>
+<!-- ===== navegue pelas categorias ===== -->
+<section class="sec">
+  <div class="stitle"><h2>Navegue pelas categorias</h2><p>Encontre <a href="#joias">Joias Exclusivas</a> e as melhores marcas em <a href="#relogios">Relógios</a> e <a href="#eyewear">Eyewear</a></p></div>
+  <div class="cards6 wrap">
+    <a class="cardp" href="#joias"><img src="img/cat-joias.webp" alt=""><span>Joias</span></a>
+    <a class="cardp" href="#relogios"><img src="img/cat-relogios.webp" alt=""><span>Relógios</span></a>
+    <a class="cardp" href="#eyewear"><img src="img/cat-oculos.webp" alt=""><span>Óculos</span></a>
+    <a class="cardp" href="#armacoes"><img src="img/cat-armacoes.webp" alt=""><span>Armações</span></a>
+    <a class="cardp" href="#forme"><img src="img/cat-forme.webp" alt=""><span>Prata For Me</span></a>
+    <a class="cardp" href="#" data-zap="Quero ver joias com diamantes"><img src="img/cat-diamantes.webp" alt=""><span>Diamantes Que Brilham Mais</span></a>
   </div>
 </section>
 
-<section class="sec wrap" id="forme">
-  <div class="sec-head"><h2>For Me by Coliseu</h2><span>prata 925 com design autoral</span></div>
-  <div class="grid" data-grid="prata"></div>
+<!-- ===== faixa de 3 banners (presentes) ===== -->
+<section class="sec">
+  <div class="stitle"><h2>Presenteie com a Coliseu</h2><p>Descubra o presente perfeito</p></div>
+  <div class="cards3 wrap">
+    <button class="cardw" data-zap="Vocês têm alianças de casamento?"><img src="img/ban-euaceito.webp" alt=""><span>Coliseu — Eu Aceito</span></button>
+    <button class="cardw" data-zap="Quero um relógio masculino de presente"><img src="img/ban-rel-masc.webp" alt=""><span>Relógios Masculinos</span></button>
+    <button class="cardw" data-zap="Quero um relógio feminino de presente"><img src="img/ban-rel-fem.webp" alt=""><span>Relógios Femininos</span></button>
+  </div>
 </section>
 
-<section class="sec wrap" id="relogios">
-  <div class="sec-head"><h2>Relojoaria</h2><span>Orient · Seiko · Bulova · Citizen · Michael Kors</span></div>
-  <div class="grid" data-grid="relogio"></div>
+<!-- ===== selo "Colis eu quero." ===== -->
+<div class="euquero"><span>Colis<em>eu<br>quero.</em></span></div>
+
+<!-- ===== JOIAS: categorias com modelos ===== -->
+<section class="sec" id="joias">
+  <div class="stitle"><h2>Joias</h2><a class="vt" href="#" data-zap="Quero ver joias de ouro">Ver todos ›</a></div>
+  <div class="cards6 wrap">
+    <button class="cardp" data-zap="Quero ver pingentes de ouro"><img src="img/j-pingentes.webp" alt=""><span>Pingentes</span></button>
+    <button class="cardp" data-zap="Quero ver anéis de ouro"><img src="img/j-aneis.webp" alt=""><span>Anéis</span></button>
+    <button class="cardp" data-zap="Quero ver brincos de ouro"><img src="img/j-brincos.webp" alt=""><span>Brincos</span></button>
+    <button class="cardp" data-zap="Quero ver pulseiras de ouro"><img src="img/j-pulseiras.webp" alt=""><span>Pulseiras</span></button>
+    <button class="cardp" data-zap="Vocês têm alianças de casamento?"><img src="img/j-aliancas.webp" alt=""><span>Alianças</span></button>
+    <button class="cardp" data-zap="Quero ver correntes e gargantilhas de ouro"><img src="img/j-correntes.webp" alt=""><span>Correntes e Gargantilhas</span></button>
+  </div>
 </section>
 
-<section class="sec wrap" id="oculos">
-  <div class="sec-head"><h2>Eyewear</h2><span>Miu Miu · Persol · Ferragamo · Gucci · Prada</span></div>
-  <div class="grid" data-grid="oculos"></div>
+<!-- ===== Coleção Way (carrossel de produtos) ===== -->
+<section class="sec">
+  <div class="stitle"><h2>Coleção Way</h2><p>Linhas <span class="dour">delicadas</span> em ouro 18k com <span class="dour">Diamantes</span>.</p></div>
+  <div class="carr wrap" data-carr="way"></div>
 </section>
 
-<!-- lojas -->
-<section class="sec wrap" id="lojas">
-  <div class="sec-head"><h2>Nossas lojas</h2><span>14 unidades · RS e SC · desde 1968</span></div>
-  <div class="lojas" id="gridLojas"></div>
+<!-- ===== Eyewear (faixa preto + branco) ===== -->
+<section class="eyeband" id="eyewear">
+  <div class="eb-esq">
+    <h2>Eyewear</h2>
+    <button class="btn-preto" data-zap="Quero ver óculos">Ver todos</button>
+  </div>
+  <div class="eb-dir">
+    <button class="eb-item" data-zap="Quero óculos de sol"><b>Óculos de Sol</b><span>Conheça agora ›</span><img id="ebSol" src="" alt=""></button>
+    <button class="eb-item" data-zap="Quero óculos de grau"><b>Óculos de Grau</b><span>Conheça agora ›</span><img id="ebGrau" src="" alt=""></button>
+  </div>
 </section>
 
-<!-- rodapé -->
+<!-- ===== Armações (carrossel) ===== -->
+<section class="sec" id="armacoes">
+  <div class="stitle"><h2>Armações</h2><p>Armações que viraram tendência</p></div>
+  <div class="carr wrap" data-carr="armacoes"></div>
+</section>
+
+<!-- ===== Relógios: categorias ===== -->
+<section class="sec" id="relogios">
+  <div class="stitle"><h2>Relógios</h2><a class="vt" href="#" data-zap="Quero ver relógios">Ver todos ›</a></div>
+  <div class="cards6 wrap" id="relCats"></div>
+</section>
+
+<!-- ===== Novidades em Relógios (carrossel) ===== -->
+<section class="sec">
+  <div class="stitle"><h2>Novidades em Relógios</h2><p>Design, precisão e exclusividade: os relógios das marcas mais icônicas do mundo em um só lugar.</p></div>
+  <div class="carr wrap" data-carr="relogios"></div>
+</section>
+
+<!-- ===== FOR ME ===== -->
+<section class="sec" id="forme">
+  <div class="formemark">for me</div>
+  <div class="stitle"><h2>Joias Exclusivas em Prata</h2><p>For Me é a marca de joias que expressa autenticidade através do estilo.</p></div>
+  <div class="cards6 wrap" id="prataCats"></div>
+</section>
+
+<!-- ===== Coleção Bubble (carrossel) ===== -->
+<section class="sec">
+  <div class="stitle"><h2>Coleção Bubble</h2><p>Bubble traduz leveza e a sofisticação na prata 925</p></div>
+  <div class="carr wrap" data-carr="bubble"></div>
+</section>
+
+<!-- ===== Coleções Icônicas (2×2 editorial) ===== -->
+<section class="sec">
+  <div class="stitle"><h2>Coleções Icônicas</h2><p>Criações Autorais, Exclusivas e Atemporais.</p></div>
+  <div class="iconicas wrap">
+    <div class="ico-card"><img src="img/col-nido.webp" alt="Coleção Nido"><button class="btn-colecao" data-zap="Quero ver a coleção Nido">Descubra a coleção Nido</button></div>
+    <div class="ico-card"><img src="img/col-plisse.webp" alt="Coleção Plissé"><button class="btn-colecao" data-zap="Quero ver joias de ouro da coleção Plissé">Descubra a coleção Plissé</button></div>
+    <div class="ico-card"><img src="img/col-rosee.webp" alt="Coleção Rosée"><button class="btn-colecao" data-zap="Quero ver joias de ouro rosé">Descubra a coleção Rosée</button></div>
+    <div class="ico-card"><img src="img/col-colosseo.webp" alt="Coleção Colosseo"><button class="btn-colecao" data-zap="Quero ver a coleção Colosseo">Descubra a coleção Colosseo</button></div>
+  </div>
+</section>
+
+<!-- ===== newsletter ===== -->
+<section class="news wrap">
+  <h3>Ingresse no universo Coliseu e fique por dentro das nossas novidades</h3>
+  <div class="nw-grid">
+    <p>Cadastre-se e receba novidades, promoções, atualizações de estoque, e muito mais - diretamente no seu e-mail</p>
+    <form id="formNews">
+      <input type="email" placeholder="Digite seu E-mail" required>
+      <button class="btn-preto" type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== diferenciais (lista) ===== -->
+<section class="difs wrap">
+  <div><b>Você é única</b><p>Nosso atendimento on-line é personalizado, humanizado e especializado</p></div>
+  <div><b>Frete grátis</b><p>A Coliseu não cobra o frete, você também pode comprar online e retirar em uma de nossas lojas</p></div>
+  <div><b>Entrega rápida</b><p>Precisa da entrega em menos de 7 dias úteis? <a href="#" data-zap="Preciso de entrega em menos de 7 dias">Fale com nossa equipe pelo WhatsApp</a></p></div>
+  <div><b>MAM</b><p>O Melhor Atendimento do Mundo está em nosso DNA - e é o nosso compromisso diário</p></div>
+  <div><b>Super trocas</b><p>Trocas em até 30 dias e devoluções em até 7 dias, sempre com frete grátis e atendimento</p></div>
+</section>
+
+<!-- ===== depoimentos ===== -->
+<section class="sec">
+  <div class="stitle"><h2>Quem comprou, recomenda</h2><p>Avaliações reais de clientes Coliseu</p></div>
+  <div class="depos wrap">
+    <div class="depo"><span>“</span><p>Gostei muito do atendimento, embora tenha sido on-line, entrei em contato e fui muito bem atendida.</p><b>Maria J.</b></div>
+    <div class="depo"><span>“</span><p>A minha experiência na Coliseu foi excelente do início ao fim. O que mais me chamou a atenção foi o cuidado.</p><b>Elenice S.</b></div>
+    <div class="depo"><span>“</span><p>A loja é excelente, um atendimento impecável.</p><b>Lucimara O.</b></div>
+  </div>
+</section>
+
+<!-- ===== lojas ===== -->
+<section class="sec" id="lojas">
+  <div class="stitle"><h2>Nossas lojas</h2><p>14 unidades · RS e SC · desde 1968</p></div>
+  <div class="lojas wrap" id="gridLojas"></div>
+</section>
+
+<!-- ===== rodapé ===== -->
 <footer>
   <div class="wrap f-grid">
     <div>
       <img class="f-logo" src="logo.webp" alt="Coliseu">
       <p class="f-sobre">Desde 1968, o melhor da joalheria brasileira: joias próprias em ouro 18k, prata 925 For Me, relojoaria e eyewear das maiores marcas do mundo.</p>
+      <img class="f-pag" src="img/meios-pagamento.png" alt="Meios de pagamento">
     </div>
     <div>
       <b>Atendimento</b>
