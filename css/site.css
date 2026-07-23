@@ -147,7 +147,7 @@ a{color:inherit}
   border:1px solid #111;background:#111;color:#fff;font-size:10.5px;font-weight:600;
   letter-spacing:.14em;text-transform:uppercase;padding:10px 8px;transition:all .2s;
 }
-.prod .zbt svg{width:14px;height:14px;color:#c9ac7c}
+.prod .zbt svg{width:14px;height:14px;color:#25D366}
 .prod:hover .zbt{background:#8a6d3c;border-color:#8a6d3c}
 .prod:hover .zbt svg{color:#fff}
 .c-seta{
@@ -243,15 +243,14 @@ footer a:hover{color:#111}
 /* ===== WhatsApp FAB + janela ===== */
 .zap-fab{
   position:fixed;right:26px;bottom:26px;z-index:900;
-  width:62px;height:62px;border-radius:50%;
-  background:linear-gradient(135deg,#c9ac7c,#a98850 55%,#8a6d3c);
+  width:62px;height:62px;border-radius:50%;background:#25D366;
   display:flex;align-items:center;justify-content:center;
-  box-shadow:0 16px 34px -10px rgba(138,109,60,.6), inset 0 1px 0 rgba(255,255,255,.35);
+  box-shadow:0 16px 34px -10px rgba(37,211,102,.55);
   transition:transform .2s;
 }
 .zap-fab:hover{transform:scale(1.06)}
 .zap-fab::before{
-  content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(179,146,90,.55);
+  content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(37,211,102,.5);
   animation:pulso 2s infinite;
 }
 @keyframes pulso{0%{transform:scale(.9);opacity:.9}70%{transform:scale(1.25);opacity:0}100%{opacity:0}}
