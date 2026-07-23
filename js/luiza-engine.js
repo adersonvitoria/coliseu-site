@@ -1,5 +1,5 @@
 /* =====================================================================
-   Íris — engine de atendimento (extraída do demo joalheria-bots)
+   Luiza — engine de atendimento (extraída do demo joalheria-bots)
    Catálogo, filiais, preços e fotos: dados públicos do site coliseu.com.br
    ===================================================================== */
 function pushVenda(){}
@@ -646,8 +646,8 @@ function resetChat(){
   chatBox.innerHTML = '';
   addDay('Hoje');
   botSay([
-    'Olá! ✨ Que bom te ver por aqui. Você está falando com a <b>Coliseu Joalheria</b> — joias, relógios e eyewear <b>desde 1968</b>.',
-    'Eu sou a <b>Íris</b>, concierge digital da Coliseu 💛 Posso te ajudar a <b>escolher um presente</b> 🎁, mostrar <b>alianças</b> 💍, <b>relógios</b> ⌚ e <b>óculos</b> 🕶️, <b>agendar um atendimento VIP</b> ou indicar a <b>loja mais próxima</b> — são <b>14 lojas no RS e SC</b> 📍<br><br>O que você procura hoje?'
+    'Oi, tudo bem? 😊 Eu sou a <b>Luiza</b>, atendente da <b>Coliseu Joalheria</b> — joias, relógios e eyewear <b>desde 1968</b> 💛',
+    'Pode me contar sem pressa o que você está buscando, tá? Eu te ajudo em tudo: <b>escolher um presente</b> 🎁, ver <b>alianças</b> 💍, <b>relógios</b> ⌚ e <b>óculos</b> 🕶️, <b>agendar um atendimento VIP</b> ou achar a <b>loja mais próxima</b> de você — são <b>14 lojas no RS e SC</b> 📍<br><br>Me conta: o que você procura hoje?'
   ], ['Quero um presente 🎁','Alianças 💍','Relógios ⌚','Óculos 🕶️','Loja mais próxima 📍']);
 }
 
@@ -932,7 +932,7 @@ function responder(raw){
   if (/humano|atendente|consultora|consultor|pessoa|gente de verdade|falar com alguem|falar com uma/.test(t)){
     const f = chat.filial || filialById('iguatemi');
     return { msgs: [
-      `Claro! 👩‍💼 Vou te transferir pra consultora <b>${f.consultora}</b> (${f.nome}). Ela assume em instantes <b>com todo o histórico da nossa conversa</b> — você não repete nada.`,
+      `Claro, imagina! 👩‍💼 Vou te passar pra minha colega <b>${f.consultora}</b>, da ${f.nome}. Ela continua daqui em instantes <b>com todo o histórico do nosso papo</b> — você não vai precisar repetir nada, tá?`,
       '<i>— Na operação real é aqui que o time humano recebe o lead já qualificado, com peça, orçamento e loja anotados. Pode continuar testando! 😉</i>'
     ], chips: ['Ver catálogo','Quero um presente 🎁','Alianças 💍'] };
   }
@@ -1182,16 +1182,16 @@ function responder(raw){
 
   /* ---- despedida / saudação ---- */
   if (/encerrar|tchau|obrigad|valeu|ate mais|so isso/.test(t)){
-    return { msgs: ['Foi um prazer! 💛 Qualquer coisa é só me chamar — <b>eu estou aqui 24h</b>, todos os dias.<br><br><i>Coliseu Joalheria — o Melhor Atendimento do Mundo, agora também digital ✦</i>'], chips: ['Recomeçar conversa','Quero um presente 🎁'] };
+    return { msgs: ['Foi um prazer falar contigo! 💛 Qualquer coisa me chama, <b>eu fico por aqui 24h</b>, todos os dias 😊<br><br><i>Luiza · Coliseu Joalheria — o Melhor Atendimento do Mundo, agora também digital ✦</i>'], chips: ['Recomeçar conversa','Quero um presente 🎁'] };
   }
   if (/recomecar|reiniciar|comecar de novo/.test(t)){ resetChat(); return null; }
   if (/^(oi+|ola+|bom dia|boa tarde|boa noite|opa|eai|hey|hello)[!,. 😊🙂👋]*$/.test(t)){
-    return { msgs: ['Olá! 👋💛 Eu sou a <b>Íris</b>, concierge digital da Coliseu. Posso te ajudar com <b>presentes</b>, <b>alianças</b>, <b>relógios</b>, <b>óculos</b>, <b>consertos</b> ou achar a <b>loja mais próxima</b>. Por onde começamos?'],
+    return { msgs: ['Oi, tudo bem? 😊 Eu sou a <b>Luiza</b>, atendente da Coliseu 💛 Posso te ajudar com <b>presentes</b>, <b>alianças</b>, <b>relógios</b>, <b>óculos</b>, <b>consertos</b> ou achar a <b>loja mais próxima</b>. Por onde a gente começa?'],
              chips: ['Quero um presente 🎁','Alianças 💍','Relógios ⌚','Loja mais próxima 📍'] };
   }
 
   /* ---- fallback ---- */
-  return { msgs: ['Boa pergunta! Vou anotar pra te responder certinho — e uma consultora confirma os detalhes se precisar 😊<br><br>Enquanto isso, posso te ajudar com:'],
+  return { msgs: ['Te entendi! 😊 Quero resolver isso direitinho pra você — já anotei aqui e, se precisar, uma colega do time te confirma os detalhes. Enquanto isso, me deixa te ajudar com:'],
            chips: ['Quero um presente 🎁','Alianças 💍','Relógios ⌚','Óculos 🕶️','Loja mais próxima 📍','Falar com consultora'] };
 }
 
