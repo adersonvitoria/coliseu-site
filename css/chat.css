@@ -1,0 +1,90 @@
+:root{
+  --wa:#efeae2; --wa-2:#f0f2f5; --wa-out:#d9fdd3; --wa-in:#ffffff;
+  --gold:#b3925a; --gold-2:#cfb387; --gold-3:#9a7b45; --gold-deep:#8a6d3c;
+  --tinta:#1a1a1a; --txt:#2b2b2b; --txt-soft:#878787; --line:#d9d9d9; --line-soft:#ececec;
+  --ok:#1e8a54; --warn:#a97c14; --danger:#bf5443;
+}
+/* ========== ROBÔ (celular + chat, WhatsApp claro) ========== */
+.robo-wrap{display:grid;grid-template-columns:minmax(340px,430px) 1fr;gap:26px;align-items:start}
+.phone{
+  background:#141414;border:1px solid #3a3325;border-radius:34px;padding:10px;
+  box-shadow:0 40px 85px -35px rgba(0,0,0,.4), 0 0 55px -25px rgba(179,146,90,.25);
+  position:sticky;top:92px;
+}
+.screen{border-radius:26px;overflow:hidden;display:flex;flex-direction:column;height:min(72vh,690px);background:var(--wa)}
+.wa-top{
+  background:var(--wa-2);display:flex;align-items:center;gap:11px;padding:11px 14px;flex-shrink:0;
+  border-bottom:1px solid rgba(17,27,33,.08);
+}
+.wa-ava{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#c2a473,#8a6d3c);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wa-ava svg{width:22px;height:22px}
+.wa-top .wn{min-width:0}
+.wa-top .wn b{display:flex;align-items:center;gap:5px;font-size:14.5px;color:#111b21;white-space:nowrap}
+.wa-top .wn b .vf{color:#53bdeb;font-size:13px}
+.wa-top .wn span{display:block;font-size:11.5px;color:#667781}
+.wa-top .icons{margin-left:auto;color:#54656f;font-size:15px;display:flex;gap:16px}
+.wa-body{
+  flex:1;overflow-y:auto;padding:14px 12px 8px;display:flex;flex-direction:column;gap:7px;
+  background-image:
+    radial-gradient(rgba(120,100,60,.075) 1.1px, transparent 1.5px),
+    linear-gradient(180deg,#f1ebe1,#ece4d6);
+  background-size:22px 22px,100% 100%;
+}
+.wa-day{align-self:center;background:#fff;color:#54656f;font-size:11px;border-radius:8px;padding:4px 12px;margin:6px 0;box-shadow:0 1px 2px rgba(17,27,33,.08)}
+.msg{max-width:88%;border-radius:9px;padding:8px 11px 7px;font-size:13.2px;line-height:1.45;position:relative;color:#111b21;word-wrap:break-word;box-shadow:0 1px 1.5px rgba(17,27,33,.13)}
+.msg .t{display:block;text-align:right;font-size:10px;color:rgba(17,27,33,.42);margin-top:3px}
+.msg.in{align-self:flex-start;background:var(--wa-in);border-top-left-radius:2px}
+.msg.out{align-self:flex-end;background:var(--wa-out);border-top-right-radius:2px}
+.msg b{color:#0b141a}
+.msg i{color:#3b4a54}
+.typing{align-self:flex-start;background:var(--wa-in);border-radius:9px;border-top-left-radius:2px;padding:12px 15px;display:flex;gap:5px;box-shadow:0 1px 1.5px rgba(17,27,33,.13)}
+.typing i{width:7px;height:7px;border-radius:50%;background:#8696a0;animation:tp 1.2s infinite}
+.typing i:nth-child(2){animation-delay:.18s}
+.typing i:nth-child(3){animation-delay:.36s}
+@keyframes tp{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-5px);opacity:1}}
+.chips{display:flex;gap:7px;flex-wrap:wrap;padding:9px 12px;border-top:1px solid rgba(17,27,33,.08);background:var(--wa-2);flex-shrink:0;max-height:118px;overflow-y:auto}
+.chip{
+  background:#fff;border:1px solid #00a884;color:#00806a;
+  font-size:12px;font-weight:600;border-radius:18px;padding:6px 13px;transition:all .18s;
+}
+.chip:hover{background:#e7f8f3;color:#00614f}
+.wa-foot{display:flex;gap:9px;padding:9px 12px 12px;background:var(--wa-2);flex-shrink:0}
+.wa-foot input{
+  flex:1;background:#fff;border:none;border-radius:20px;padding:11px 16px;
+  color:#111b21;font-size:13.5px;font-family:'Jost','Manrope',sans-serif;outline:none;
+  box-shadow:inset 0 0 0 1px rgba(17,27,33,.08);
+}
+.wa-foot input::placeholder{color:#8696a0}
+.send-btn{
+  width:44px;height:44px;border-radius:50%;border:none;flex-shrink:0;
+  background:#00a884;color:#fff;font-size:17px;display:flex;align-items:center;justify-content:center;
+  transition:filter .2s;
+}
+.send-btn:hover{filter:brightness(1.08)}
+
+/* cards dentro do chat */
+.pcard{background:#fff;border:1px solid rgba(179,146,90,.45);border-radius:10px;padding:11px;margin:2px 0;display:block}
+.pcard b{display:block;font-size:13px;margin:7px 0 2px;color:#33290f}
+.pc-art{background:#fff;border:1px solid rgba(179,146,90,.3);border-radius:8px;display:flex;align-items:center;justify-content:center;padding:6px;margin-bottom:4px;overflow:hidden}
+.pc-art svg{width:100%;max-width:190px;height:auto;display:block}
+.pc-art-lg{padding:12px}
+.pc-img{width:100%;max-width:230px;height:auto;display:block;border-radius:6px}
+.pc-tag{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;background:rgba(179,146,90,.13);color:#8a6d3c;border-radius:4px;padding:2px 7px}
+.pc-desc{display:block;font-size:11.5px;color:#54656f;margin:2px 0}
+.pc-price{display:block;font-family:'Cormorant Garamond',serif;font-size:15px;color:#1a1a1a;margin-top:5px}
+.pc-price small{display:block;font-size:10.5px;color:#667781;font-family:'Jost','Manrope',sans-serif}
+.pc-cap{display:block;font-size:10.5px;color:#667781;margin-top:5px}
+.loja-card{background:#fff;border:1px solid rgba(0,168,132,.5);border-radius:10px;padding:11px 12px;margin:2px 0}
+.loja-card b{font-size:13px;color:#0b141a}
+.loja-card .lc-l{display:block;font-size:11.5px;color:#54656f;margin-top:3px}
+.pay-card{background:linear-gradient(160deg,#ecfaf3,#ddf2e7);border:1px solid rgba(0,150,110,.5);border-radius:10px;padding:12px;margin:2px 0;text-align:center;color:#0b342a}
+.pay-card .qr{background:#fff;border-radius:8px;padding:8px;display:inline-block;margin:8px 0 4px;box-shadow:0 2px 8px rgba(17,27,33,.12)}
+.pay-card .qr svg{display:block;width:128px;height:128px}
+.pay-card .px{font-family:'Cormorant Garamond',serif;font-size:10px;color:#5c6b73;word-break:break-all;margin-top:6px}
+.link-card{background:#eef7fc;border:1px solid rgba(30,130,190,.45);border-radius:10px;padding:11px 12px;margin:2px 0;color:#12384f}
+.link-card .lk{display:block;font-family:'Cormorant Garamond',serif;font-size:11px;color:#0b7dbd;text-decoration:underline;margin-top:5px;word-break:break-all}
+.cert-card{background:linear-gradient(160deg,#fdf7e1,#f6ecd0);border:1.5px solid var(--gold);border-radius:10px;padding:13px;margin:2px 0;text-align:center}
+.cert-card .cc-t{font-family:'Cormorant Garamond',serif;font-size:16.5px;color:#8a6d3c;letter-spacing:.06em}
+.cert-card .cc-n{font-family:'Cormorant Garamond',serif;font-size:11px;color:#8d7c58;margin-top:3px}
+.cert-card .cc-l{font-size:11px;color:#54656f;margin-top:6px}
+
