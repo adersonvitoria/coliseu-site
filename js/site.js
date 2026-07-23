@@ -59,7 +59,7 @@ function renderRelCats(){
     ['Relógios de Mergulho','Quero um relógio de mergulho',  p => p.cat === 'relogio' && nnm(p).includes('mergulho')]
   ];
   document.getElementById('relCats').innerHTML = cats.map(([t, msg, f]) =>
-    `<button class="cardp" data-zap="${msg}"><img src="${achaFoto(f)}" alt="" loading="lazy" style="object-fit:contain;background:#fff;border:1px solid #f0f0f0"><span>${t}</span></button>`).join('');
+    `<button class="cardp cardq" data-zap="${msg}"><img src="${achaFoto(f)}" alt="" loading="lazy"><span>${t}</span></button>`).join('');
 }
 function renderPrataCats(){
   const cats = [
@@ -71,7 +71,7 @@ function renderPrataCats(){
     ['Correntes e Gargantilhas', 'Quero ver gargantilhas de prata', p => p.cat === 'prata' && p.art === 'colar']
   ];
   document.getElementById('prataCats').innerHTML = cats.map(([t, msg, f]) =>
-    `<button class="cardp" data-zap="${msg}"><img src="${achaFoto(f)}" alt="" loading="lazy" style="object-fit:contain;background:#fff;border:1px solid #f0f0f0"><span>${t}</span></button>`).join('');
+    `<button class="cardp cardq" data-zap="${msg}"><img src="${achaFoto(f)}" alt="" loading="lazy"><span>${t}</span></button>`).join('');
 }
 function renderEyewear(){
   document.getElementById('ebSol').src  = achaFoto(p => p.cat === 'oculos' && nnm(p).includes('sol'));
